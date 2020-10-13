@@ -4,7 +4,12 @@
     <title>StolasIn personal page</title>
   </head>
   <body>
-    <h>應用統計excel筆記<br></h>
+    <menu>menu :<br></menu>
+    <ol>
+      <li href="#excel">excel筆記</li>
+      <li href="#STL">STL</li>
+    </ol>
+    <h id="excel">應用統計excel筆記<br></h>
     <ol>
     <ol>
       <li>一些常用操作 :
@@ -90,14 +95,47 @@
       
     </ol>
     <br><br><br><br>
-    <h1>主要STL介紹 :</h1>
+    <h1 id="STL">主要STL介紹 :</h1>
     <ol>
       <li><a href="#stack">stack</a></li>
       <li><a href="#queue">queue</a></li>
       <li><a href="#linked_list">linked_list</a></li>
-      <li><a href="#tree">tree</a></li><br><br>
+      <li><a href="#tree">tree</a></li>
     </ol>
-    
+    <br><br>
+    <ol>
+      <li id="stack"><br>
+        <img src="https://cdn.softwaretestinghelp.com/wp-content/qa/uploads/2019/06/pictorial-representation-of-stack.png">
+        <br>
+        stack特徵 :<br>
+        stack是一種LIFO的資料結構，函數呼叫疊代的時候就是一種stack的表現<br>
+        stack可以使用linked_list實作，需要一個變數紀錄最頂端的元素<br>
+      </li>
+      <li id="queue"><br>
+        <img src="https://iq.opengenus.org/content/images/2019/05/pq.png">
+        <br>
+        queue特徵 :<br>
+        queueg是一種FIFO的資料結構<br>
+        stack可以使用linked_list實作，需要兩個變數分別紀錄最頭的元素與最尾巴的元素<br>
+      </li>
+      <li id="linked_list"><br>
+        <img src="https://i.stack.imgur.com/y63By.gif">
+        <br>
+        linked_list特徵 :<br>
+        linked_list的每個節點通常由兩個元素(data與指向下一個節點的指標)組成(double linked_list有三個)<br>
+        linked_list的插入與刪除都是O(1) (不考慮尋找點的過程)
+        linked_list不像array一樣有random access memory，所以linked_list的traverse需要 O(n)<br>
+        比起array適合用在頻繁做插入刪除且各數不多的資料<br>
+      </li>
+      <li id="tree"><br>
+        <img src="https://cdn.softwaretestinghelp.com/wp-content/qa/uploads/2019/08/pictorial-representation-of-a-binary-tree.png">
+        <br>
+        tree特徵 :<br>
+        樹會有一個根節點<br>
+        樹的父節點與子節點會有parent child的關係<br>
+        level被稱為樹高，是從根結點到最遠葉節點的距離<br>
+      </li>
+    </ol>
     <a href="https://fjuonlinejudge.github.io/Training/">reference
    </body>
 </html>
