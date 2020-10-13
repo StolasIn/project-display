@@ -4,7 +4,7 @@
     <title>StolasIn personal page</title>
   </head>
   <body>
-    <h1>STL :</h1>
+    <h1>C++內建STL :</h1>
     <ol>
       <li><a href="#stack">stack</a></li>
       <li><a href="#queue">queue</a></li>
@@ -13,11 +13,7 @@
     </ol>
     <ul>
       <li><a id="stack">stack : </a>
-      <br>T表示template的任意值<br>
-      標頭檔： <stack> <br>
-      建構式： stack <T> arr;<br>
-      iterator： stack <T>：：iterator iter;<br>
-      形式：first in first out (FIFO)<br>
+      <br>形式：first in first out (FIFO)<br>
       簡介：可用linked_list實作，通常函數呼叫的時候會使用stack<br>
       s.push(變數) ：在頂端插入元素，複雜度 O(1)<br>
       s.pop() ：刪除頂端元素，複雜度 O(1)<br>
@@ -28,10 +24,7 @@
 
 
       <li><a id="queue">queue :</a>
-      <br>標頭檔： <queue> <br>
-      建構式： queue <T> q <br>
-      iterator : queue <T>::iterator iter;<br>
-      形式：last in first out (LIFO) <br>
+      <br>形式：last in first out (LIFO) <br>
       簡介：可用linked_list實作<br>
       q.push(變數) ：插入尾端元素，複雜度 O(1)<br>
       q.pop() ：刪除頂端元素，複雜度 O(1)<br>
@@ -42,9 +35,7 @@
 
 
       <li><a id="linked_list">linked_list :</a>
-      <br>標頭檔： <list><br>
-      建構式： list <T> L<br>
-      L.size() ：回傳元素個數，複雜度 O(1)<br>
+      <br>L.size() ：回傳元素個數，複雜度 O(1)<br>
       L.empty() ：回傳是否為空，複雜度 O(1)<br>
       L.push_front(T a),L.push_back(T a) ：插入頂端/尾端元素，複雜度 O(1)<br>
       L.pop_front(),L.pop_back() ：刪除頂端/尾端元素，複雜度 O(1)<br>
@@ -52,7 +43,20 @@
       L.erase(iterator first,iterator last) ：把 \[first,last) 指到的東西全部刪掉，回傳 last。複雜度與砍掉的數量呈線性關係，如果沒有指定 last, 那會自動視為只刪除 first 那項<br>
       L.splice(iterator it,list &x,iterator first,iterator last) ：first 和 last 是 x 的迭代器。此函式會把 [first,last) 指到的東西從 x 中剪下並加到 it 所指的那項的前面。x 會因為這項函式而改變。若未指定 last, 那只會將 first 所指的東西移到 it 前方。複雜度與轉移個數呈線性關係<br>
       <li><a id="tree">tree :</a>
-      
+      <b>set :</b>
+      <br>s.size() ：回傳元素個數，複雜度 O(1)<br>
+      s.empty() ：回傳是否為空，複雜度 O(1)<br>
+      s.clear() ：清除元素，複雜度 O(size)<br>
+      s.insert(a) ：加入元素 a, 複雜度 O(log(size))<br>
+      s.erase(iterator first,iterator last) ：刪除 [first,last) , 若沒有指定 last 則只刪除 first, 複雜度 O(logsize) 與加上元素個數有關係<br>
+      s.erase(a) ：刪除鍵值 a, 複雜度 O(log(size))<br>
+      s.find(a) ：回傳指向鍵值 a 的迭代器，若不存在則回傳 s.end (), 複雜度 O(log(size))<br>
+      s.lower_bound(a) ：回傳指向第一個鍵值大於等於 a 的迭代器。複雜度 O(log(size))<br>
+      s.upper_bound(a) ：回傳指向第一個鍵值大於 a 的迭代器。複雜度 O(log(size))<br><br>
+      <b>map :</b>
+      m.size(),m.empty(),m.clear(),m.erase(iterator first,iterator last),m.erase(T1 a),m.find(T1 a),m.lower_bound(T1 a),m.upper_bound(T1 a) ：同 set<br>
+      m[a] ：存取鍵值 a 對應的值，若 a 沒有對應的值，會插入一個元素，使 a 對應到預設值並回傳之。複雜度 O(logsize)<br>
+      m.insert(pair<T1,T2> a) ：若沒有鍵值為 a.first 的值，插入一個鍵值為 a.first 的值對應到 a.second, 並回傳一個 pair,first 是指向剛插入的元素的迭代器、second 是 true; 若已經有了，回傳一個 pair,first 是指向鍵值為 k.first 的元素的迭代器，second 是 false。複雜度 O(logsize)<br><br>
       </li>
     </ul>
 
