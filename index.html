@@ -150,7 +150,7 @@
       <br><br><br>
     </ol>
     <br><br><br>
-    <h1 id="matrix">matrix :</h1>
+    <h1 id="matrix">matrix (矩陣):</h1>
       <ol>
         <li>
           <ul>矩陣名詞 :<br>
@@ -176,10 +176,43 @@
             <li>對角線矩陣 (diagonal matrix) 的矩陣反元素是所有元素取倒數(自乘n次則是把所有元素取n次方)</li>
             <li>(k*A)^-1 = (A^-1)/k k是一個常數</li>
             <li>(A^n)^T = (A^T)^n</li>
-            <li></li>
+            <li>所有elementary matrix都是可逆的且他的反矩陣也是elementary matrix</li>
+            <li>如果一個矩陣可以經由row operation變成I，表示他是可逆的 p.s可經由同樣順序的運算將一個I變成該矩陣的反矩陣</li>
           </ul>
         </li>
       </ol>
+    <h1>determinant (行列式) :</h1>
+    <ol>
+      <li>
+        <ul> 行列式性質 :<br>
+          <li>det(A) = det(A^T)</li>
+          <li>det(A*B) = det(A)*det(B)</li>
+          <li>det(A^-1) = 1/(det(A))</li>
+          <li>det(A+B) != det(A)+det(B)</li>
+          <li>det(kA) = (k)^n*det(A) k為一個常數，n表示A的階數</li>
+          <li>上/下三角矩陣的行列式值為該矩陣的對角線元素合</li>
+          <li>對一個矩陣的行或列乘k倍，其行列式值變為k倍</li>
+          <li>將矩陣的兩行/列互換，其行列式值變為原本的-1倍</li>
+          <li>將原本矩陣的一行乘上k倍加到另外一行，其行列式值不變</li>
+          <li>矩陣任兩列/行程比例，其行列式值為0</li>
+          <li>矩陣某行/列為0，其行列式值為0</li>
+          <li>A^-1 = adj(A)/det(A)</li>
+          <li>adj(A)表示一個陣列，其元素為以該元素為目標的其他<a href="#餘子式展開">餘子式展開和</a></li>
+        </ul>
+      <li>
+      <li>
+        <ul>其他重要操作 : <br>
+          <li id="餘子式展開">cofactor expansion (餘子式展開) :<br>
+              <img src="https://semath.info/img/la/cofactor_expansion_ex3_01.jpg">
+              <br><br><br>
+              將矩陣以任一行/列展開，可便利算出行列式值，四階同下圖操作<br>
+              tips : 以0較多的那一行/列展開可計算較少行列式
+              <img src="https://semath.info/img/determinant_five_by_five_03.jpg">
+              <br><br><br>
+          </li>
+        </ul>
+      </li>
+    </ol>
     <a href="https://fjuonlinejudge.github.io/Training/">reference
    </body>
 </html>
