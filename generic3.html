@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Generic - Hyperspace by HTML5 UP</title>
+		<title>Linear algebra</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -32,10 +32,72 @@
 				<!-- Main -->
 					<section id="main" class="wrapper">
 						<div class="inner">
-							<h1 class="major">A Generic Page</h1>
+							<h1 class="major">Linear algebra</h1>
 							<span class="image fit"><img src="images/pic04.jpg" alt="" /></span>
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+							<ol>
+							<li><h3>矩陣名詞 :</h3>
+							  <ul>
+							    <li>sequare matrix (方陣) : 行數=列數的矩陣 n*n階的方陣</li>
+							    <li>unit matrix (單位矩陣) : 對角線元素為1其餘為0的方陣</li>
+							    <li>zero matrix (0矩陣) : 所有元素皆為0的矩陣</li>
+							    <li>matrix transpose (轉置矩陣) : 矩陣行列互換 記為 A^T</li>
+							    <li>matrix inverse (反矩陣) : 記為A^-1  滿足A*(A^-1)=(A^-1)*A=I</li>
+							    <li>diagonal matrix (對角線矩陣) : 除主對角線元素外其他元素皆為0的矩陣</li>
+							    <li>triangular matrix (上/下三角矩陣) : 所有主對角線下/上的元素皆為0</li>
+							    <li>symmtric matrix (對稱矩陣) : 主對角線以外的元素可經由主對角線兩兩對稱</li>
+							    <li>singular/nunsingular matrix (奇異/非奇異矩陣) : 該矩陣沒有/有矩陣反元素存在</li>
+							    <li>elementary matrix (列操作矩陣) : 一個單位矩陣經過一次的列運算</li>
+							  </ul>
+							</li>
+							<br><br><br>
+							<li><h3>matrix properties :</h3>
+							  <ul>
+							    <li>矩陣不一定滿足指數律以及乘法的交換律</li>
+							    <li>A*B=A*C 但 B不一定等於C</li>
+							    <li>(A*B)^T = (B^T)*(A^T) 且 (A*B)^-1 = (B^-1)*(A^-1)</li>
+							    <li>ut:上三角矩陣 lt:下三角矩陣  : (ut/lt)^T 還是ut/lt , ut*ut 或 lt*lt 都依然是ut/lt</li>
+							    <li>假設A是symmtric matrix : A^T=A</li>
+							    <li>對角線矩陣 (diagonal matrix) 的矩陣反元素是所有元素取倒數(自乘n次則是把所有元素取n次方)</li>
+							    <li>(k*A)^-1 = (A^-1)/k k是一個常數</li>
+							    <li>(A^n)^T = (A^T)^n</li>
+							    <li>所有elementary matrix都是可逆的且他的反矩陣也是elementary matrix</li>
+							    <li>如果一個矩陣可以經由row operation變成I，表示他是可逆的 p.s可經由同樣順序的運算將一個I變成該矩陣的反矩陣</li>
+							  </ul>
+							</li>
+						      </ol>
+						      <br><br><br>
+						    <h1 id="determinant">determinant (行列式) :</h1>
+						    <ol>
+						      <li><h3>行列式性質 :</h3>
+							<ul>
+							  <li>det(A) = det(A^T)</li>
+							  <li>det(A*B) = det(A)*det(B)</li>
+							  <li>det(A^-1) = 1/(det(A))</li>
+							  <li>det(A+B) != det(A)+det(B)</li>
+							  <li>det(kA) = (k)^n*det(A) k為一個常數，n表示A的階數</li>
+							  <li>上/下三角矩陣的行列式值為該矩陣的對角線元素合</li>
+							  <li>對一個矩陣的行或列乘k倍，其行列式值變為k倍</li>
+							  <li>將矩陣的兩行/列互換，其行列式值變為原本的-1倍</li>
+							  <li>將原本矩陣的一行乘上k倍加到另外一行，其行列式值不變</li>
+							  <li>矩陣任兩列/行程比例，其行列式值為0</li>
+							  <li>矩陣某行/列為0，其行列式值為0</li>
+							  <li>A^-1 = adj(A)/det(A)</li>
+							  <li>adj(A)表示一個陣列，其元素為以該元素為目標的其他<a href="#餘子式展開">餘子式展開和</a></li>
+							</ul>
+						      </li>
+						      <li><h3>其他重要操作 :</h3>
+							<ul>
+							  <li id="餘子式展開">cofactor expansion (餘子式展開) :<br>
+							      <img src="https://semath.info/img/la/cofactor_expansion_ex3_01.jpg">
+							      <br><br><br>
+							      將矩陣以任一行/列展開，可便利算出行列式值，四階同下圖操作<br>
+							      tips : 以0較多的那一行/列展開可計算較少行列式<br><br><br>
+							      <img src="https://semath.info/img/inverse_cofactor_ex4_02.jpg">
+							      <br><br><br>
+							  </li>
+							</ul>
+						      </li>
+						    </ol>
 						</div>
 					</section>
 
