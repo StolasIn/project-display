@@ -48,21 +48,27 @@
 							      <li><a href="#queue">queue</a></li>
 							      <li><a href="#linked_list">linked_list</a></li>
 							      <li><a href="#tree">tree</a></li>
-								<code>&#60stack&#62::iter</code>
 							    </ol>
 							    <ol>
 							      <li id="stack"><h3>stack :</h3><br>
 								<img   class="image" width = "80%" height "70%" src="https://1.bp.blogspot.com/-MvmkUaxhmxc/XT28HANcx1I/AAAAAAAAIMQ/LZ55aF7Pe4wODbfvgaidiW2IvAeE8oLMACLcBGAs/s1600/Implementation%2Bof%2Bstack.png" alt="" >
 								<ul>
-								  <li>stack是一種LIFO的資料結構，函數呼叫疊代的時候就是一種stack的表現</li>
-								  <li>stack可以使用linked_list實作，需要一個變數紀錄最頂端的元素</li>
+									<li>只有一個開口，只能從該開口插入、刪除東西的資料結構</li>
+									<li>stack是一種LIFO的資料結構，函數呼叫疊代或網頁上下跳頁的時候就是一種基於stack的表現</li>
+									<li>stack可以使用linked_list或array實作，且需要一個變數紀錄最頂端的元素</li>
+									<li>以array實作時非常直觀，就是單純把陣列尾部當作開口，但無法動態配置記憶體，在宣告時就決定了最大空間上限</li>
+									<li>以linked_list實作時可以在執行時期動態配置記憶體，但需要比陣列多使用一個pointer空間</li>
+									<li>在c++中有提供stack的資料結構，宣告方法為<code>&#60stack&#62 stack1;</code></li>
 								</ul>
 							      </li>
 							      <li id="queue"><h3>queue :</h3><br>
 								<img class="image" width = "80%" height "70%" src="https://iq.opengenus.org/content/images/2019/05/pq.png">
 								<ul>
-								  <li>queueg是一種FIFO的資料結構</li>
-								  <li>stack可以使用linked_list實作，需要兩個變數分別紀錄最頭的元素與最尾巴的元素</li>
+									<li>有兩個開口，一個負責插入資料，一個負責刪除資料的資料結構</li>
+								        <li>queue是一種FIFO的資料結構，有點類似生活中的排隊</li>
+								        <li>stack可以使用linked_list或環形array實作，需要兩個變數分別紀錄最頭的元素與最尾巴的元素</li>
+									<li>以環形陣列實作時需要保留一格空間作比對，才不會發生覆蓋資料的問題<li>
+									<li>在c++中有提供queue的資料結構，宣告方法為<code>&#60queue&#62 queue1;</code></li>
 								</ul>
 							      </li>
 							      <li id="linked_list"><h3>linked_list :</h3><br>
@@ -70,16 +76,17 @@
 								<ul>
 								  <li>linked_list的每個節點通常由兩個元素(data與指向下一個節點的指標)組成(double linked_list有三個)</li>
 								  <li>linked_list的插入與刪除都是O(1) (不考慮尋找點的過程)</li>
-								  <li>linked_list不像array一樣有random access memory，所以linked_list的traverse需要 O(n)</li>
-								  <li>比起array適合用在頻繁做插入刪除且各數不多的資料</li>
+								  <li>linked_list不像array一樣能random access memory，所以linked_list的traverse需要 O(n)</li>
+								  <li>比起array更適合用在頻繁做插入刪除且個數不多的資料，因為當在陣列裡頻繁的做插入刪除時需要整組陣列的移動</li>
 								</ul>
 							      </li>
 							      <li id="tree"><h3>tree :</h3><br>
 								<img class="image" width = "80%" height "70%" src="https://4.bp.blogspot.com/-2tpABL2iW9E/WxeYjtVYTiI/AAAAAAAAKO8/Qsp1yDikqWwXOLAW1pJt3t3DoEbxgj2nwCLcBGAs/s1600/Algorithm_strict_full_tree.jpg" alt="" data-position="center center">
 								<ul>
-								  <li>樹會有一個根節點</li>
-								  <li>樹的父節點與子節點會有parent child的關係</li>
-								  <li>level被稱為樹高，是從根結點到最遠葉節點的距離</li>
+								        <li>樹會有一個根節點</li>
+								        <li>樹的父節點與子節點會有parent child的關係</li>
+								        <li>level被稱為樹高，是從根結點到最遠葉節點的距離</li>
+									<li>建議參考 : <a href="http://alrightchiu.github.io/SecondRound/treeshu-introjian-jie.html">樹的簡介與類型介紹</a></li>
 								</ul>
 							      </li>
 							    </ol>
