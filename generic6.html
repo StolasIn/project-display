@@ -6,11 +6,23 @@
 -->
 <html>
 	<head>
-		<title>Digital electronics</title>
+		<title id="top">Digital electronics</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			li{
+				font-family:Microsoft JhengHei;
+				font-size: 18px;
+			}
+			h3{
+				font-size: 24px;
+			}
+			h4{
+				font-size: 20px;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -41,7 +53,7 @@
 							  <li>Some Logic Devices</li>
 							  <li>Latches And Flip-Flops</li>
 							</ul>
-							<ol style="A">
+							<ol style="list-style-type:upper-latin">
 							  <li><h3>Boolean Algebra : </h3><br>
 							    <img class="image" width = "80%" height "70%" src="https://i.ytimg.com/vi/EPJf4owqwdA/maxresdefault.jpg">
 							    <ol>
@@ -66,13 +78,13 @@
 							  </li>
 							  <li><h3>Some Logic Devices : </h3><br>
 							    <ol>
-							      <li><h3>multiplexer<h3></li>
+							      <li><h4>multiplexer<h4></li>
 								      <img class="image" width = "80%" height "70%" src="https://projectiot123.com/wp-content/uploads/2019/07/Introduction-to-Multiplexer.jpg">
 								      <p>一個用來選擇資料的Devices，有2^n個資料要選擇時，需要n個control input</p>
-							      <li><h3>three-state buffers<h3></li>
+							      <li><h4>three-state buffers<h4></li>
 								      <img class="image" width = "80%" height "70%" src="https://i.ytimg.com/vi/X2HPjppH7Rs/maxresdefault.jpg">
 								      <p>可用來替代MUX，除了具備選擇資料的能力，還能增加訊號的強度</p>
-								<li><h3>decoder and encoder</h3></li>
+								<li><h4>decoder and encoder</h4></li>
 								      <img class="image" width = "80%" height "70%" src="https://www.tutorialspoint.com/digital_circuits/images/2_to_4_decoder.jpg">
 								      <p>decoder接收n個input與1個enable input，產生<=2^n個output(但只會有一個是1)，output的模式是所有組合的boolean expression
 								      <br>e.x 2to4 decoder 輸入A,B ， 產生A'B' , A'B , AB' , AB</p>
@@ -80,14 +92,14 @@
 								      <p>encoder接收2^n個input，產生n個output與一個enable output用來確保不會所有input都是0，output的模式是根據input來決定，具有優先權
 								      <br>e.x 8to3 encoder 輸入1 0 1 1 0 0 0 0 , 會看最後那個1 , 產生a=0 , b=1 , c=1 namely 011;
 								      <br>看法是最後1出現的位置-1，然後轉成2進制</p>
-								<li><h3>read-only memories(ROM)</h3></li>
+								<li><h4>read-only memories(ROM)</h4></li>
 									<img class="image"width="80%" height="70%" src="https://slideplayer.com/slide/12360125/73/images/9/ROM+address+data+Summer+2012+ETE+Digital+Electronics+9.jpg">
 								      	<p>利用decoder產生minterm expression，然後根據所產生的函數選擇他需要的minterm</p>
-								<li><h3>programmable logic arrays(PLA)</h3></li>
+								<li><h4>programmable logic arrays(PLA)</h4></li>
 								      	<img class="image"width="80%" height="70%" src="https://i.ytimg.com/vi/jrQ1YYgiOTo/maxresdefault.jpg">
 								      	<p>跟ROM一樣，但是適合比較大的操作<br>PLA table : </p>
 								      	<img class="image"width="80%" height="70%" src="https://slideplayer.com/slide/13873974/85/images/39/Table+9-1.+PLA+Table+for+Figure+9-25.jpg">
-								<li><h3>programmable arrays logic(PAL)</h3></li>
+								<li><h4>programmable arrays logic(PAL)</h4></li>
 								      <p>跟PLA一樣，但是換個寫法</p>
 							    </ol>
 								<li>Latches And Flip-Flops :<br>
@@ -103,9 +115,7 @@
 		<!-- Footer -->
 			<footer id="footer" class="wrapper alt">
 				<div class="inner">
-					<ul class="menu">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
+					<a href="#top">go to top</a>
 				</div>
 			</footer>
 
