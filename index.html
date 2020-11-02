@@ -27,7 +27,9 @@
 	<body class="is-preload">
 		<script>
 			  $(document).ready(function() {
-			      $("button").addClass("animated bounce");
+			      $("#btn").click(function(){
+			      	$("#text1").hide();
+			      });
 			  });
 		</script>
 		<!-- Sidebar -->
@@ -55,6 +57,7 @@
 								<li><a href="generic.html" class="button scrolly">About me</a></li>
 								<li><button id="btn">more info</button><li>
 							</ul>
+							<p id="text1">123</p>
 						</div>
 					</section>
 
