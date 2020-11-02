@@ -48,7 +48,7 @@
 							<h1>#define inf 1e9</h1>
 							<ul class="actions">
 								<li><a href="generic.html" class="button scrolly">About me</a></li>
-								<li><button id="show" >more info</button><li>
+								<li><button id="btn" >more info</button><li>
 								<li><button id="hide" >less info</button><li>
 								<!--<li><button id="shake">shake text</button></li>-->
 							</ul>
@@ -271,17 +271,13 @@
 			 <script src="script.js" type="text/javascript"></script>
 			<script>
 			  $(document).ready(function() {
-				$("#text1").addClass("animated fadeOut");
-				$("#hide").addClass("animated fadeOut");
-			      $("#hide").click(function(){
+			      $("#btn").click(function(){
 			      	$("#text1").hide();
-				$("#hide").hide();
-				 $("#show").show();
+				$("#btn").text("more info");
 			      });
-			      $("#show").click(function(){
+			      $("#btn").dblclick(function(){
 			      	$("#text1").show();
-				$("#show").hide();
-				$("#hide").show();
+				$("#btn").text("less info");
 			      });
 			  });
 			</script>
