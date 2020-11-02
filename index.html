@@ -51,6 +51,7 @@
 								<li><a href="generic.html" class="button scrolly">About me</a></li>
 								<li><button id="btn" >less info</button><li>
 								<button id="ani">Start Animation</button>
+								<button id="anib">go back</button>
 								<!--<li><button id="hide" >less info</button><li>
 								<li><button id="shake">shake text</button></li>-->
 							</ul>
@@ -279,6 +280,11 @@
 				    var div = $("#anit");  
 				    div.animate({left: '500px'}, "slow");
 				    div.animate({fontSize: '2em'}, "slow");
+				  });
+				  $("#anib").click(function(){
+				    var div = $("#anit");  
+				    div.animate({right: '500px'}, "slow");
+				    div.animate({fontSize: '1em'}, "slow");
 				  });
 			      $("#btn").click(function(){
 			      	$("#text1").fadeOut("slow");
