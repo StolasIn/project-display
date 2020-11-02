@@ -8,8 +8,12 @@
 	<head>
 		<script>
 			  $(document).ready(function() {
-			      $(".button").addClass("animated bounce");
+			      $("#data").addClass("animated bounce");
 			  });
+				var btn = document.querySelector('#btn');
+				btn.addEventListener('click', function() {
+				  alert('click!');
+				});
 		</script>
 		<title>StolasIn personal page</title>
 		<meta charset="utf-8" />
@@ -54,6 +58,7 @@
 							<h1>#define inf 1e9</h1>
 							<ul class="actions">
 								<li><a href="generic.html" class="button scrolly">About me</a></li>
+								<li><button id="btn">more info</button><li>
 							</ul>
 						</div>
 					</section>
