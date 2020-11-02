@@ -267,8 +267,8 @@
 			<script src="assets/js/main.js"></script>
 			<script>
 			  $(document).ready(function() {
-				$("#text1).hide();
-				  $("#hide").hide();
+				$("#text1").addClass("animated fadeOut");
+				$("#hide").addClass("animated fadeOut");
 			      $("#hide).click(function(){
 			      	$("#text1").hide();
 				$("#hide").hide();
@@ -276,7 +276,7 @@
 			      });
 			      $("#show").click(function(){
 			      	$("#text1").show();
-				$("#show").show();
+				$("#show").hide();
 				$("#hide").show();
 			      });
 			  });
