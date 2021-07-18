@@ -2,9 +2,16 @@
 /* Default
 ------------------------------------------------- */
 
+html {
+   margin: 0px;
+   height: 100%;
+   width: 100%;
+}
 body {
-  margin: 0; 
-  padding: 0;
+   margin: 0px;
+   min-height: 100%;
+   width: 100%;
+   background-color: #9370DB;
 }
 
 /* Layout
@@ -13,14 +20,16 @@ body {
 #container {
  width: 100%;　/* Contents width set at 900px */
  height: 100%;
- background-color: #9370DB;
+ 
 }
 
 #header {
   text-align: center;
-  padding: 20px 20px;
+  padding-top: 20px;
+  padding-bottom: 10px;
   background-image: url("tentacle.jpg");
-  background-repeat:repeat;
+  background-attachment: fixed;
+  background-repeat:no-repeat;
 }
 
 #wrap {
@@ -32,11 +41,11 @@ body {
  float: right; /* Wrap entries, etc. around right */
  width: 720px !important; /* Set width*/
  width /* for IE5.5 */: 710px;
- /*margin-left: 12px;*/ /* Set left margin */
 }
 
 #main_part { 
-  margin: 15px;
+  margin-left: 15px;
+  margin-top: 15px;
 }
 
 #left {
@@ -50,10 +59,13 @@ body {
 }
 
 #footer {
- clear: both; /* Remove all wrap arounds */
- padding: 10px 0px;
- width: 100%;
-
+  clear: both; /* Remove all wrap arounds */
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-image: url("tentacle.jpg");
+  background-attachment: fixed;
+  background-repeat:no-repeat;
 }
 /* Layout
 ------------------------------------------------------------ */
@@ -71,7 +83,9 @@ a[href] {
   color: black;
 }
 
-
+button {
+  padding: 5px 10px;
+}
 /*class
 -------------------------------------------------------------*/
 </style>
