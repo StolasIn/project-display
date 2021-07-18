@@ -1,0 +1,77 @@
+<style type="text/css">
+/* Default
+------------------------------------------------- */
+
+body {
+  margin: 0; 
+  padding: 0;
+}
+
+/* Layout
+------------------------------------------------------------ */
+
+#container {
+ width: 100%;　/* Contents width set at 900px */
+ height: 100%;
+ background-color: #9370DB;
+}
+
+#header {
+  text-align: center;
+  padding: 20px 20px;
+  background-image: url("tentacle.jpg");
+  background-repeat:repeat;
+}
+
+#wrap {
+ width: 900px; /*Width set at680px（460px + 208px) */
+ float: left; /*Wrap main and side menu 1 around left*/
+}
+
+#main {
+ float: right; /* Wrap entries, etc. around right */
+ width: 720px !important; /* Set width*/
+ width /* for IE5.5 */: 710px;
+ /*margin-left: 12px;*/ /* Set left margin */
+}
+
+#main_part { 
+  margin: 15px;
+}
+
+#left {
+ float: left; /* Wrap side menu 1 around left */
+ width: 180px; /* Set width */
+}
+
+#right {
+ float: right; /* Wrap side menu 2 around right */
+ width: 400px; /* Set width*/
+}
+
+#footer {
+ clear: both; /* Remove all wrap arounds */
+ padding: 10px 0px;
+ width: 100%;
+
+}
+/* Layout
+------------------------------------------------------------ */
+
+/*class
+-------------------------------------------------------------*/
+
+h1 {
+  font-family: Avantgarde;
+  font-style: oblique;
+  color: white;
+}
+
+a[href] {
+  color: black;
+}
+
+
+/*class
+-------------------------------------------------------------*/
+</style>
