@@ -4,31 +4,27 @@
 <head>
   <link href="style.css" type="text/css" rel="stylesheet">
   <meta charset="utf-8" />
+  <title>main page</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 </head>
 <body>
   <div id="container">
     <div id="header">
-      <h1>Personal Page</h1>
+    	<h1><a href=".\index.html"><img src="pic/home.jpg" height="65" width="65" style="float:left"/></a>Personal Page</h1>
     </div>
-
     <div id="wrap">
       <!--中間-->
       <div id="main">
       	<div id="main_part">
-	        <button type="button"><a href="#bottom">電鰻</a></button>
-	        <h2 id="Origin">網頁</h2>
-	          <a href="https://StolasIn.github.io/Original design" target="_blank">
-	          度ㄉ度度
-	          </a>
-	        <br>
+	        <a href="#bottom"><button type="button">電鰻</button></a>
 	        <h2 id="pic">許多的圖片</h2>
 	        <ul>
-	          <li>ina with blindfold</li><br>
-	          <img src="pic/blindfold.jpg" height="200" width="300"/><br>
-	          <li>high quality tako coat</li><br>
-	          <img src="pic/ina_high_quality.jpg" height="170" width="300"/><br>
-	          <li>lots of tako</li><br>
-	          <img src="pic/ina_with_tako.jpg" height="160" width="300"/><br>
+	          <li>ina with blindfold</li>
+	          <img src="pic/blindfold.jpg" height="200" width="300"/>
+	          <li>high quality tako coat</li>
+	          <img src="pic/ina_high_quality.jpg" height="170" width="300"/>
+	          <li>lots of tako</li>
+	          <img src="pic/ina_with_tako.jpg" height="160" width="300"/>
 	        </ul>
 	        <a href="https://www.youtube.com/channel/UCMwGHR0BTZuLsmjY_NT5Pwg" target="_blank">Learn More</a>
 	        <h2 id="pat">拍拍tako</h2>
@@ -43,21 +39,35 @@
 	          <li><a href="https://youtu.be/ey5lhzTjxts" target="_blank">Orangestar 1hr</a></li>
 	          <li><a href="https://youtu.be/DXHgBUMnlvY" target="_blank">放鬆合輯</a></li>
 	        </ul>
-	        <button type="button"><a href="#top">升天電梯</a></button>
+	        <a href="#top"><button type="button">升天電梯</button></a>
 	        <p id="bottom"></p>
 	     </div>
       </div>
 
       <!--左邊-->
       <div id="left">
-        <ul>
-          <li><a href="#Origin">最開始的網頁</a></li>
-          <li><a href="#pic">ina圖片</a></li>
-          <li><a href="#pat">摸摸</a></li>
-          <li><a href="#song">歌單</a></li>
-        </ul>
+      	<table>
+      		<thead>
+      			<th scope="row">links</th>
+      		</thead>
+      		<tbody>
+      			<tr>
+      				<td><a href=".\Original design.html" target="_blank"><button type="button" id="menu">最開始的網頁</button></a></td>
+			      </tr>
+			     	<tr>
+			     		<td><a href="#pic"><button type="button" id="menu">ina圖片</button></a></td>
+			     	</tr>
+			     	<tr>
+			     		<td><a href="#pat"><button type="button" id="menu">摸摸</button></a></td>
+			     	</tr>
+			     	<tr>
+			     		<td><a href="#song"><button type="button" id="menu">歌單</button></a></td>
+			     	</tr>
+		      </tbody>
+      	</table>
+      	<input type="search"></input>
+      	<button type="button">search</button>
       </div>
-
     </div>
 
     <!--右邊-->
