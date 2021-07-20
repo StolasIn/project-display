@@ -4,32 +4,51 @@
 <head>
   <link href="style.css" type="text/css" rel="stylesheet">
   <meta charset="utf-8" />
+  <title>main page</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+  <!--ajax-->
+  <script>
+    $(document).ready(function()){
+      $.ajax({
+        url:".\song list.txt"
+      })
+    }
+  </script>
 </head>
 <body>
   <div id="container">
     <div id="header">
-      <h1><a href=".\index.html"><img src="pic/home.jpg" height="65" width="65" style="float:left"/></a>algorithm</h1>
+      <h1><a href=".\index.html"><img src="pic/home.jpg" height="65" width="65" style="float:left"/></a>algorithm
+        <img src="pic/ina.gif" height="70" width="50" style="float:right"/></h1>
     </div>
-
     <div id="wrap">
       <!--中間-->
       <div id="main">
         <div id="main_part">
           <a href="#bottom"><button type="button">電鰻</button></a>
-          
           <a href="#top"><button type="button">升天電梯</button></a>
           <p id="bottom"></p>
        </div>
       </div>
 
       <!--左邊-->
-      <div id="left">left
+      <div id="left">
+        <table>
+          <thead>
+            <th scope="row">links</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href=".\Original design.html" target="_blank"><button type="button" id="menu">最開始的網頁</button></a></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
 
     <!--右邊-->
       <div id="right">
-        right
       </div>
       <div id="footer">
         <h1>Bottom</h1>
