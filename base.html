@@ -2,37 +2,49 @@
 <!--comment-->
 <html lang="zh-Hant-TW">
 <head>
-  <link href="style.css" type="text/css" rel="stylesheet">
   <meta charset="utf-8" />
+  <title>base</title>
 </head>
 <body>
   <div id="container">
     <div id="header">
-      <h1><a href=".\index.html"><img src="pic/home.jpg" height="65" width="65" style="float:left"/></a>title</h1>
+      <h1 class="title"><a href=".\index.html"><img src="pic/home.jpg" height="65" width="65" style="float:left"/></a>title
+        <img src="pic\ina.GIF" height="70" width="50" style="float:right"/></h1>
     </div>
 
     <div id="wrap">
       <!--中間-->
       <div id="main">
-      	<div id="main_part">
-	        <a href="#bottom"><button type="button">電鰻</button></a>
-	        <a href="#top"><button type="button">升天電梯</button></a>
-	        <p id="bottom"></p>
-	     </div>
+        <div id="main_part">
+          <a href="#bottom"><button type="button" style="margin: 15px; font-size: 18px; padding: 5px">電鰻</button></a>
+          
+          <a href="#top"><button type="button" style="margin: 15px; font-size: 18px; padding: 5px">升天電梯</button></a>
+          <p id="bottom"></p>
+       </div>
       </div>
 
       <!--左邊-->
-      <div id="left">left
+      <div id="left">
+        
       </div>
     </div>
 
     <!--右邊-->
       <div id="right">
-        right
+        <audio id="music" controls="controls" loop="loop">
+          <source src="Ina's Festive.mp3" type="audio/mpeg" />
+          <source src="Ina's Festive.mp3" type="audio/ogg" />
+        </audio>
+        
       </div>
+
       <div id="footer">
-      	<h1>Bottom</h1>
+        <a href="https://github.com/StolasIn" target="_blank"><img src="pic\github.jpg" width="30" height="30"/></a>
+        <h1 class="title">Bottom</h1>
       </div>
   </div>
+  <link href="style.css" type="text/css" rel="stylesheet">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>

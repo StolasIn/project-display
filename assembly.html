@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!--comment-->
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8" />
+  <title>base</title>
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1 class="title"><a href=".\index.html"><img src="pic\ina\home.jpg" height="65" width="65" style="float:left"/></a>x86 assembly project
+        <img src="pic\ina\ina.GIF" height="70" width="50" style="float:right"/></h1>
+    </div>
+
+    <div id="wrap">
+      <!--中間-->
+      <div id="main">
+        <div id="main_part">
+          <ul>
+          <li> 
+            <h1>spring bird</h1>
+            <img src="pic\assembly\bird.jpg" width="200" height="auto"/>
+            <p style="font-size: 20px;">
+              構思由以上flappy bird所產生，並在此基礎上做了某些改變，為了簡化設計上的工程，使用了irvine的library。
+            </p>
+          </li>
+          <li>
+            <h1>曾經遇到的困難</h1>
+            <img src="pic\assembly\cry.jpg"/ width="200" height="auto"/>
+            <ol>
+              <li>
+                <h2>隨機生成場景元素</h2>
+                <img src="pic\assembly\code1.jpg"/ width="300" height="auto"/>
+                <p style="font-size: 20px;">
+                  為了生成隨機的場景，使用了4個變數去控制，分別是管寬、
+                  管間的寬度、管開口的寬度、管開口的位置，再利用隨機函數randomRange去生成水管。
+                </p>
+              </li>
+              <li>
+                <h2>定位</h2>
+                <img src="pic\assembly\code2.jpg"/ width="400" height="auto"/>
+                <p style="font-size: 20px;">
+                  實質的利用變數去儲存位置，讓使用者的輸入與時間去改變位置，
+                  並將結果印在遊戲視窗中，以此方式也較方便做碰撞判定。
+                </p>
+              </li>
+              <li>
+                <h2>製造移動效果</h2>
+                <img src="pic\assembly\code3.jpg" width="400" height="auto"/>
+                <p style="font-size: 20px;">
+                  用兩層迴圈把整個場景向左移動一格，來達到像鳥向前走的視覺效果。
+                </p>
+              </li>
+              <li>
+                <h2>讀取使用者輸入</h2>
+                <img src="pic\assembly\code4.jpg" width="400" height="auto"/>
+                <p style="font-size: 20px;">
+                  當單純使用readchar或readint時會出現
+                  需要等待輸入完成程式才會進入下一步動作的情形，
+                  這並不符合該遊戲的模式，因為當沒有輸入時鳥依然需要自然掉落，
+                  所以必須要使用readkey，來確保程式不需要等待使用者，且為了使遊戲操作更加順暢，
+                  使用了多重的readkey。
+                </p>
+              </li>
+            </ol>
+          </li>
+          </ul>
+       </div>
+      </div>
+
+      <!--左邊-->
+      <div id="left">
+        <a href="#bottom"><button type="button" style="margin: 15px; font-size: 18px; padding: 5px">電鰻</button></a>
+        <table style="background-color: #EE82EE;">
+          <thead>
+            <tr>
+              <td style="text-align: center; font-size: 20px; background-color: #663399; color: white;">
+                links
+              </td>
+            <tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href=""><button class="btn">123</button></a></td>
+            </tr>
+            <tr>
+              <td><a href=""><button class="btn">123</button></a></td>
+            </tr>
+            <tr>
+              <td><a href=""><button class="btn">123</button></a></td>
+            </tr>
+            <tr>
+              <td><a href=""><button class="btn">123</button></a></td>
+            </tr>
+          </tbody>
+        </table>
+        <a href="#top"><button type="button" style="margin: 15px; font-size: 18px; padding: 5px">升天電梯</button></a>
+          <p id="bottom"></p>
+      </div>
+    </div>
+
+    <!--右邊-->
+      <div id="right">
+        <audio id="music" controls="controls" loop="loop">
+          <source src="Ina's Festive.mp3" type="audio/mpeg" />
+          <source src="Ina's Festive.mp3" type="audio/ogg" />
+        </audio>
+        <img src="pic\ina\long tako.jpg" width="400" height="600" alt="long..."/>
+      </div>
+
+      <div id="footer">
+        <a href="https://github.com/StolasIn" target="_blank"><img src="pic\icon\github.jpg" width="30" height="30"/></a>
+        <h1 class="title">Bottom</h1>
+      </div>
+  </div>
+  <link href="base.css" type="text/css" rel="stylesheet">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
