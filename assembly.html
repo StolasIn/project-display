@@ -3,7 +3,7 @@
 <html lang="zh-Hant-TW">
 <head>
   <meta charset="utf-8" />
-  <title>base</title>
+  <title>assembly</title>
 </head>
 <body>
   <div id="container">
@@ -18,18 +18,18 @@
         <div id="main_part">
           <ul>
           <li> 
-            <h1>spring bird</h1>
+            <p style="font-size: 25px; font-style: oblique; font-weight: bold;">spring bird</p>
             <img src="pic\assembly\bird.jpg" width="200" height="auto"/>
             <p style="font-size: 20px;">
               構思由以上flappy bird所產生，並在此基礎上做了某些改變，為了簡化設計上的工程，使用了irvine的library。
             </p>
           </li>
           <li>
-            <h1>曾經遇到的困難</h1>
+            <p style="font-size: 25px;" id="obstacle">曾經遇到的困難</p>
             <img src="pic\assembly\cry.jpg"/ width="200" height="auto"/>
             <ol>
               <li>
-                <h2>隨機生成場景元素</h2>
+                <p style="font-size: 22px;">隨機生成場景元素</p>
                 <img src="pic\assembly\code1.jpg"/ width="300" height="auto"/>
                 <p style="font-size: 20px;">
                   為了生成隨機的場景，使用了4個變數去控制，分別是管寬、
@@ -37,7 +37,7 @@
                 </p>
               </li>
               <li>
-                <h2>定位</h2>
+                <p style="font-size: 22px;">定位</p>
                 <img src="pic\assembly\code2.jpg"/ width="400" height="auto"/>
                 <p style="font-size: 20px;">
                   實質的利用變數去儲存位置，讓使用者的輸入與時間去改變位置，
@@ -45,14 +45,14 @@
                 </p>
               </li>
               <li>
-                <h2>製造移動效果</h2>
+                <p style="font-size: 22px;">製造移動效果</p>
                 <img src="pic\assembly\code3.jpg" width="400" height="auto"/>
                 <p style="font-size: 20px;">
                   用兩層迴圈把整個場景向左移動一格，來達到像鳥向前走的視覺效果。
                 </p>
               </li>
               <li>
-                <h2>讀取使用者輸入</h2>
+                <p style="font-size: 22px;">讀取使用者輸入</p>
                 <img src="pic\assembly\code4.jpg" width="400" height="auto"/>
                 <p style="font-size: 20px;">
                   當單純使用readchar或readint時會出現
@@ -64,13 +64,41 @@
               </li>
             </ol>
           </li>
+          <li>
+            <p style="font-size: 25px;" id="Experience">心得</p>
+            <img src="pic\assembly\hard.jpg" width="250" height="auto"/>
+            <p>
+              大概就像這樣，由於組合語言本身是一個較底層的語言，當要做出比較複雜的操作時，
+              所需要自己實作的東西就會比較多，也讓程式碼維護與更新變得更加艱辛，
+              所以必須把每個區塊分割好，再加上很多的註解，才能完成這個小遊戲
+              雖然這是一個蠻大的缺點，但是組合語言相對於其他較高階的語言來說，
+              執行速度十分快速，在做某些操作時可以直接用暴力法完成，而不會影響到使用者的體驗。
+              總而言之，本次小專題是人生中第一次製作遊戲，在過程中充滿了期待與新奇感，
+              於是整體開發時間也非常快速，也了解到要製作出一個能玩的遊戲需要顧慮許多部份，
+              算是一個很不錯的學習經歷，雖然希望未來別再碰到組語就是了zzz。
+              </p>
+          </li>
+          <li>
+            <p style="font-size: 25px;" id="Actual play">實際遊玩畫面</p>
+             <video controls>
+              <source src="pic/assembly/play.mp4" type="video/mp4">
+              <source src="pic/assembly/play.mp4" type="video/ogg">
+            </video> 
+          </li>
+          <li>
+            <p style="font-size: 25px;" id="Easter eggs">彩蛋</p>
+            <p>
+              當然為了增加遊戲樂趣，也有設計彩蛋，在輸入名字時可以觸發，不過檔案無法放上來，
+              大概也只有我知道了吧。
+            </p>
+          </li>
           </ul>
        </div>
       </div>
 
       <!--左邊-->
-      <div id="left">
-        <a href="#bottom"><button type="button" style="margin: 15px; font-size: 18px; padding: 5px">電鰻</button></a>
+      <div id="left" style="position: fixed;">
+        <a href="#footer"><button type="button" style="margin: 15px; font-size: 18px; padding: 5px">電鰻</button></a>
         <table style="background-color: #EE82EE;">
           <thead>
             <tr>
@@ -81,21 +109,20 @@
           </thead>
           <tbody>
             <tr>
-              <td><a href=""><button class="btn">123</button></a></td>
+              <td><a href="#obstacle"><button class="btn">Obstacle</button></a></td>
             </tr>
             <tr>
-              <td><a href=""><button class="btn">123</button></a></td>
+              <td><a href="#Experience"><button class="btn">Experience</button></a></td>
             </tr>
             <tr>
-              <td><a href=""><button class="btn">123</button></a></td>
+              <td><a href="#Actual play"><button class="btn">Actual play</button></a></td>
             </tr>
             <tr>
-              <td><a href=""><button class="btn">123</button></a></td>
+              <td><a href="#Easter eggs"><button class="btn">Easter eggs</button></a></td>
             </tr>
           </tbody>
         </table>
-        <a href="#top"><button type="button" style="margin: 15px; font-size: 18px; padding: 5px">升天電梯</button></a>
-          <p id="bottom"></p>
+        <a href="#header"><button type="button" style="margin: 15px; font-size: 18px; padding: 5px">升天電梯</button></a>
       </div>
     </div>
 
