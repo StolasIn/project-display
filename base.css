@@ -119,6 +119,11 @@ li {
   font-family: "Microsoft YaHei",sans-serif;
   border-radius: 5px;
 }
+
+.imgrds{
+  border-radius: 25px;
+  box-shadow: 0 0 10px rgba(0,0,0,1.00);
+}
 /*class
 -------------------------------------------------------------*/
 </style>

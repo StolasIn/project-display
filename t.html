@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+	
+</head>
+<body>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<button id="b01">13</button>
+	<p id="myDiv">123</p>
+	<script>
+		$(document).ready(function(){
+			$("#b01").click(function(){
+			htmlobj=$.ajax({url:"/test1.txt",async:false});
+			$("#myDiv").html(htmlobj.responseText);
+			});
+		});
+	</script>
+</body>
