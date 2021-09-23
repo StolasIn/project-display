@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8" />
   <title>assembly</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" src="index.js" charset="UTF-8"></script>
 </head>
 <body>
   <div id="container">
@@ -80,7 +82,7 @@
           </li>
           <li>
             <p style="font-size: 25px;" id="Actual play">實際遊玩畫面</p>
-             <video controls>
+             <video controls style="width: 650px;">
               <source src="pic/assembly/play.mp4" type="video/mp4">
               <source src="pic/assembly/play.mp4" type="video/ogg">
             </video> 
@@ -132,11 +134,27 @@
           <source src="Ina's Festive.mp3" type="audio/mpeg" />
           <source src="Ina's Festive.mp3" type="audio/ogg" />
         </audio>
-        <img src="pic\ina\long tako.jpg" width="400" height="600" alt="long..." style="border-radius: 25px;" />
+
+        <br>
+        <button onclick="insert_tako()" 
+        style="border-radius: 10px; font-size:15px; padding: 5px">
+        getting longer
+        </button>
+
+        <button onclick="reset_tako()" 
+        style="border-radius: 10px; font-size:15px; padding: 5px">
+        reset
+        </button>
+        <br>
+
+        <img src="pic\ina\long tako1.jpg" width="400" alt="long..." style="border-top-left-radius: 25px; border-top-right-radius: 25px; padding-top: 5px;" />
+        <img src="pic\ina\long tako2.jpg" width="400" alt="long..."/>
+        <div id="long_tako_insert"></div>
+        <img src="pic\ina\long tako3.jpg" width="400" alt="long..." style="border-bottom-left-radius: 25px; border-bottom-right-radius: 25px;" />
       </div>
 
       <div id="footer">
-        <a href="https://github.com/StolasIn" target="_blank"><img src="pic\icon\github.jpg" width="30" height="30"/></a>
+        <a href="https://github.com/StolasIn" target="_blank"><img src="pic\icon\github.jpg" width="30" height="30" style="margin:auto;" /></a>
         <h1 class="title">Bottom</h1>
       </div>
   </div>

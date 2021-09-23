@@ -2,57 +2,80 @@
 <!--comment-->
 <html lang="zh-Hant-TW">
 <head>
-  <link href="style.css" type="text/css" rel="stylesheet">
   <meta charset="utf-8" />
-  <title>main page</title>
+  <title>assembly</title>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
-  <!--ajax-->
-  <script>
-    $(document).ready(function()){
-      $.ajax({
-        url:".\song list.txt"
-      })
-    }
-  </script>
+  <script type="text/javascript" src="index.js" charset="UTF-8"></script>
 </head>
 <body>
   <div id="container">
     <div id="header">
-      <h1><a href=".\index.html"><img src="pic/home.jpg" height="65" width="65" style="float:left"/></a>algorithm
-        <img src="pic/ina.gif" height="70" width="50" style="float:right"/></h1>
+      <h1 class="title"><a href=".\index.html"><img src="pic\ina\home.jpg" height="65" width="65" style="float:left"/></a>Algorithm
+        <img src="pic\ina\ina.GIF" height="70" width="50" style="float:right"/></h1>
     </div>
+    
     <div id="wrap">
       <!--中間-->
       <div id="main">
         <div id="main_part">
-          <a href="#bottom"><button type="button">電鰻</button></a>
-          <a href="#top"><button type="button">升天電梯</button></a>
-          <p id="bottom"></p>
+          <div id="hi"></div>
        </div>
       </div>
 
       <!--左邊-->
-      <div id="left">
-        <table>
+      <div id="left" style="position: fixed;">
+        <a href="#footer"><button type="button" style="margin: 15px; font-size: 18px; padding: 5px">電鰻</button></a>
+        <table style="background-color: #EE82EE;">
           <thead>
-            <th scope="row">links</th>
+            <tr>
+              <td style="text-align: center; font-size: 20px; background-color: #663399; color: white;">
+                links
+              </td>
+            <tr>
           </thead>
           <tbody>
             <tr>
-              <td><a href=".\Original design.html" target="_blank"><button type="button" id="menu">最開始的網頁</button></a></td>
+              <td><button class="btn" onclick="sett()">insert</button></td>
             </tr>
+            
           </tbody>
         </table>
+        <a href="#header"><button type="button" style="margin: 15px; font-size: 18px; padding: 5px">升天電梯</button></a>
       </div>
     </div>
 
     <!--右邊-->
       <div id="right">
+        <audio id="music" controls="controls" loop="loop">
+          <source src="Ina's Festive.mp3" type="audio/mpeg" />
+          <source src="Ina's Festive.mp3" type="audio/ogg" />
+        </audio>
+
+        <br>
+        <button onclick="insert_tako()" 
+        style="border-radius: 10px; font-size:15px; padding: 5px">
+        getting longer
+        </button>
+
+        <button onclick="reset_tako()" 
+        style="border-radius: 10px; font-size:15px; padding: 5px">
+        reset
+        </button>
+        <br>
+
+        <img src="pic\ina\long tako1.jpg" width="400" alt="long..." style="border-top-left-radius: 25px; border-top-right-radius: 25px; padding-top: 5px;" />
+        <img src="pic\ina\long tako2.jpg" width="400" alt="long..."/>
+        <div id="long_tako_insert"></div>
+        <img src="pic\ina\long tako3.jpg" width="400" alt="long..." style="border-bottom-left-radius: 25px; border-bottom-right-radius: 25px;" />
       </div>
+
       <div id="footer">
-        <h1>Bottom</h1>
+        <a href="https://github.com/StolasIn" target="_blank"><img src="pic\icon\github.jpg" width="30" height="30" style="margin:auto;" /></a>
+        <h1 class="title">Bottom</h1>
       </div>
   </div>
+  <link href="base.css" type="text/css" rel="stylesheet">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>

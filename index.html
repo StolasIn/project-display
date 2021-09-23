@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!--comment-->
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8" />
+  <title>main page</title>
+  <link href="style.css" type="text/css" rel="stylesheet">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" src="index.js" charset="UTF-8"></script>
+</head>
+  <body>
+	
+  <div id="container">
+    <div id="header">
+    	<h1 class="title"><a href=".\index.html"><img src="pic\ina\home.jpg" height="65" width="65" style="float:left"/></a>Personal Page
+    		<img src="pic\ina\ina.gif" height="70" width="50" style="float:right"/></h1>
+    </div>
+    <div id="wrap">
+      <!--中間-->
+      <div id="main">
+      	<div id="main_part">
+	        <a href="#bottom"><button type="button" style="margin: 15px; font-size: 18px; padding: 5px;">電鰻</button></a>
+
+	        <!-- javascript-->
+
+	        <input type="text" id="see">
+	        <button onclick="print()" value="輸入東西">讓窩看看</button>
+	        <p id='love' style="font-size:18px; color: white; padding: 10px"></p>
+	       	
+
+	       	<table id="selector">
+	       		<tbody>
+	       			<tr>
+	       				<td><img src="pic\assembly\assembly.jpg" width="200" height="200" id="fix" class="imgrds"></td>
+	       				<td style="vertical-align:top; padding-left: 15px;">
+	       						<div style="font-size: 25px;">
+		       						<p>Assembly Language</p>
+		       						<p>指令，速度，暫存器</p>
+		       					</div>
+	       				</td>
+	       				<td style="vertical-align:bottom;">
+	       					<a href=".\assembly.html" target="_blank"><button class="rbtn">More</button></a>
+	       				</td>
+	       			</tr>
+	       		</tbody>
+	       	</table>
+
+	       	<table id="selector">
+	       		<tbody>
+	       			<tr>
+	       				<td><img src="pic\assembly\assembly.jpg" width="200" height="200" id="fix" class="imgrds"></td>
+	       				<td style="vertical-align:top; padding-left: 15px;">
+	       						<div style="font-size: 25px;">
+		       						<p>Assembly Language</p>
+		       						<p>指令，速度，暫存器</p>
+		       					</div>
+	       				</td>
+	       				<td style="vertical-align:bottom;">
+	       					<a href=".\algorithm.html" target="_blank"><button class="rbtn">More</button></a>
+	       				</td>
+	       			</tr>
+	       		</tbody>
+	       	</table>
+
+	       	<table id="selector">
+	       		<tbody>
+	       			<tr>
+	       				<td><img src="pic\assembly\assembly.jpg" width="200" height="200" id="fix" class="imgrds"></td>
+	       				<td style="vertical-align:top; padding-left: 15px;">
+	       						<div style="font-size: 25px;">
+		       						<p>Assembly Language</p>
+		       						<p>指令，速度，暫存器</p>
+		       					</div>
+	       				</td>
+	       				<td style="vertical-align:bottom;">
+	       					<button class="rbtn">More</button>
+	       				</td>
+	       			</tr>
+	       		</tbody>
+	       	</table>
+	        <a href="#top"><button type="button" style="margin: 15px; font-size: 18px; padding: 5px">升天電梯</button></a>
+	        <p id="bottom"></p>
+	     </div>
+      </div>
+
+      <!--左邊-->
+      <div id="left">
+      	<h1 style="text-align: center; color: white; font-family: Brush Script MT; font-size: 60px;">who?</h1>
+      	<img src="pic\ina\April Foolo.jpg" width="100%" height="auto"/ class="imgrds">
+      	<div style="background-color: #663399; padding-bottom: 10px; border-bottom-right-radius: 15px; border-bottom-left-radius: 15px;">
+	      	<h1 style="text-transform: uppercase; color: white; background-color: black; padding:5px;">
+	      		about me
+	      		<img src="pic\ina\book.jpg" width="50" height="50" style="float: right;">
+	      	</h1>
+	      	<p style="color: white; font-size: 20px; padding: 5px">
+	      		度ㄉ度度
+	      	</p>
+	      </div>
+      </div>
+    </div>
+
+    <!--右邊-->
+      <div id="right">
+      	<audio id="music" controls="controls" loop="loop">
+			  	<source src="Ina's Festive.mp3" type="audio/mpeg" />
+			  	<source src="Ina's Festive.mp3" type="audio/ogg" />
+			  </audio>
+
+			  <br>
+			  <button onclick="insert_tako()" 
+			  style="border-radius: 10px; font-size:15px; padding: 5px">
+			  getting longer
+				</button>
+
+				<button onclick="reset_tako()" 
+			  style="border-radius: 10px; font-size:15px; padding: 5px">
+			  reset
+				</button>
+				<br>
+
+        <img src="pic\ina\long tako1.jpg" width="400" alt="long..." style="border-top-left-radius: 25px; border-top-right-radius: 25px; padding-top: 5px;" />
+        <img src="pic\ina\long tako2.jpg" width="400" alt="long..."/>
+        <div id="long_tako_insert"></div>
+        <img src="pic\ina\long tako3.jpg" width="400" alt="long..." style="border-bottom-left-radius: 25px; border-bottom-right-radius: 25px;" />
+      </div>
+      <div id="footer">
+      	<a href="https://github.com/StolasIn" target="_blank"><img src="pic\icon\github.jpg" width="30" height="30" style="margin:auto;" /></a>
+      	<h1 class="title">Bottom</h1>
+      </div>
+  </div>
+</body>
+</html>
