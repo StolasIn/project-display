@@ -1,50 +1,92 @@
 <!DOCTYPE html>
 <!--comment-->
 <html lang="zh-Hant-TW">
+
 <head>
   <meta charset="utf-8" />
-  <title>base</title>
-</head>
-<body>
-  <div id="container">
-    <div id="header">
-      <h1 class="title"><a href=".\index.html"><img src="pic/home.jpg" height="65" width="65" style="float:left"/></a>title
-        <img src="pic\ina.GIF" height="70" width="50" style="float:right"/></h1>
-    </div>
-
-    <div id="wrap">
-      <!--中間-->
-      <div id="main">
-        <div id="main_part">
-          <a href="#bottom"><button type="button" style="margin: 15px; font-size: 18px; padding: 5px">電鰻</button></a>
-          
-          <a href="#top"><button type="button" style="margin: 15px; font-size: 18px; padding: 5px">升天電梯</button></a>
-          <p id="bottom"></p>
-       </div>
-      </div>
-
-      <!--左邊-->
-      <div id="left">
-        
-      </div>
-    </div>
-
-    <!--右邊-->
-      <div id="right">
-        <audio id="music" controls="controls" loop="loop">
-          <source src="Ina's Festive.mp3" type="audio/mpeg" />
-          <source src="Ina's Festive.mp3" type="audio/ogg" />
-        </audio>
-        
-      </div>
-
-      <div id="footer">
-        <a href="https://github.com/StolasIn" target="_blank"><img src="pic\github.jpg" width="30" height="30"/></a>
-        <h1 class="title">Bottom</h1>
-      </div>
-  </div>
-  <link href="style.css" type="text/css" rel="stylesheet">
+  <title>main page</title>
+  <link href="base.css" type="text/css" rel="stylesheet">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="index.js"></script>
+  <script type="text/javascript" src="index.js" charset="UTF-8"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <header>
+    <div class="box1">
+      <h1><a href=".\index.html"><img src="pic\ina\home.jpg" height="65" width="65"></a></h1>
+    </div>
+    <div class="box2">
+      <h1 class="title">Personal Page</h1>
+    </div>
+    <div class="box3">
+      <img src="pic\ina\ina.gif" height="80" width="60" />
+    </div>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="./index.html">首頁</a></li>
+      <li><a href="./assembly.html" target="_blank">組合語言</a></li>
+      <li><a href="./web.html" target="_blank">網頁全端</a></li>
+      <li><a href="./database.html" target="_blank">資料庫</a></li>
+      <li><a href="#">關於作者</a></li>
+    </ul>
+  </nav>
+
+  <div class="wrap">
+    <!--左邊-->
+    <section class="left">
+      <div class="side-menu">
+        <h1 style="text-align: center; font-size: 30px;">Links</h1>
+        <nav id="left" style="padding: 1rem;">
+          <a href="#obstacle"><i class="tou fab fa-affiliatetheme"></i>obstacle</a>
+          <a href="#top" style="position: fixed;"><i class="tou fab fa-affiliatetheme"></i>升天電梯</a>
+        </nav>
+      </div>
+    </section>
+    <!--中間-->
+    <div class="main">
+      <ul>
+        <li>
+          <p style="font-size: 36px; font-style: oblique; font-weight: bold;">spring bird</p><br>
+          <img src="pic\assembly\bird.jpg" width="200" height="auto" /><br>
+          <p style="font-size: 20px;">
+            構思由以上flappy bird所產生，並在此基礎上做了某些改變，為了簡化設計上的工程，使用了irvine的library。
+          </p>
+          <br><br>
+        </li>
+      </ul>
+    </div>
+    <!--右邊-->
+    <section class="right">
+      <audio id="music" controls="controls" loop="loop">
+        <source src="Ina_s Festive.mp3" type="audio/mpeg" />
+        <source src="Ina_s Festive.mp3" type="audio/ogg" />
+      </audio>
+      <br>
+      <button onclick="insert_tako()" style="border-radius: 10px; font-size:15px; padding: 5px">
+        getting longer
+      </button>
+
+      <button onclick="reset_tako()" style="border-radius: 10px; font-size:15px; padding: 5px">
+        reset
+      </button>
+      <br>
+
+      <img src="pic\ina\long tako1.jpg" width="100%" alt="long..."
+        style="border-top-left-radius: 25px; border-top-right-radius: 25px; padding-top: 5px;" />
+      <img src="pic\ina\long tako2.jpg" width="100%" alt="long..." />
+      <div id="long_tako_insert"></div>
+      <img src="pic\ina\long tako3.jpg" width="100%" alt="long..."
+        style="border-bottom-left-radius: 25px; border-bottom-right-radius: 25px;" />
+    </section>
+
+  </div>
+  <div id="footer">
+    <a href="https://github.com/StolasIn" target="_blank"><img src="pic\icon\github.jpg" width="30" height="30"
+        style="margin:auto;" /></a>
+    <h1 class="title">Bottom</h1>
+  </div>
 </body>
+
 </html>

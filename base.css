@@ -1,64 +1,108 @@
-<style type="text/css">
 /* Default
 ------------------------------------------------- */
-
-html {
-   margin: 0px;
-   height: 100%;
-   width: 100%;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
 }
 body {
-   margin: 0px;
-   min-height: 100%;
-   width: 100%;
-   background-color: #9370DB;
+  background-color: #9370db;
+  position: relative;
 }
-
-/* Layout
------------------------------------------------------------- */
-
-#container {
- width: 100%;　/* Contents width set at 900px */
- height: 100%;
- 
-}
-
-#header {
-  position:relative;
+/*header
+-------------------------------------------------------------*/
+header {
+  width: 100%;
+  padding-top: 40px;
   text-align: center;
-  padding-top: 20px;
-  padding-bottom: 10px;
   background-image: url("tentacle.jpg");
-  background-attachment: fixed;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row;
 }
 
-#wrap {
- width: 900px; /*Width set at680px（460px + 208px) */
- float: left; /*Wrap main and side menu 1 around left*/
+.box1 {
+  width: 8%;
 }
 
-#main {
- float: right; /* Wrap entries, etc. around right */
- width: 680px !important; /* Set width*/
- width /* for IE5.5 */: 670px;
+.box2 {
+  width: 84%;
 }
 
-#main_part { 
-  margin-left: 15px;
-  margin-top: 15px;
+.box3 {
+  width: 8%;
+}
+/*end*/
+
+/*nav
+-------------------------------------------------------------*/
+nav {
+  background-color: #8c2a99;
 }
 
-#left {
- float: left; /* Wrap side menu 1 around left */
- width: 220px; /* Set width */
+nav ul {
+  display: flex;
+  padding-left: 1rem;
+  list-style-type: none;
+}
+nav ul li {
+  padding: 0.5rem 0.75rem;
+}
+nav ul li a {
+  padding: 0.5rem 0.75rem;
+  color: white;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+nav ul li a:hover {
+  background-color: deeppink;
+}
+/**/
+
+/*wrap
+-------------------------------------------------------------*/
+.wrap {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 
-#right {
- float: right; /* Wrap side menu 2 around right */
- width: 400px; /* Set width*/
+section.main,
+section.right {
+  padding: 1.5rem;
+  margin: 1rem;
+}
+/*end*/
+/*left part
+-------------------------------------------------------------*/
+.left {
+  width: 30%;
+}
+/*end*/
+
+/*main part
+-------------------------------------------------------------*/
+.main {
+  width: 50%;
+  padding: 1rem;
 }
 
+.main_contain {
+  display: flex;
+  flex-direction: column;
+}
+/*end*/
+
+/*right part
+-------------------------------------------------------------*/
+.right {
+  width: 30%;
+}
+/*end*/
+
+/*footer
+-------------------------------------------------------------*/
 #footer {
   clear: both; /* Remove all wrap arounds */
   text-align: center;
@@ -66,34 +110,24 @@ body {
   padding-bottom: 10px;
   background-image: url("tentacle.jpg");
   background-attachment: fixed;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
 }
+/*end*/
 
-#fix {
-  display: block;
-}
-/* Layout
------------------------------------------------------------- */
-
-/*ob
+/*select
 -------------------------------------------------------------*/
 
-table {
-  border-radius: 10px;
-  margin-left: 15px;
-  border-color: #EE82EE;
-  border-style: solid;
-  border-width: 5px;
-}
-
-li {
+#selector {
+  border-radius: 25px;
+  background-color: #663399;
+  border: 2px #ccc solid;
+  color: white;
   font-size: 20px;
+  margin: 5px;
 }
-/*ob
--------------------------------------------------------------*/
+/*end*/
 
-
-/*class
+/*some class
 -------------------------------------------------------------*/
 .title {
   font-family: Avantgarde;
@@ -101,33 +135,91 @@ li {
   color: white;
 }
 
+img {
+  display: block;
+}
+
 .rbtn {
-  border-top-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  background-color: #DB7093;
-  font-size: 18px; 
-  padding: 5px
+  border-top-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  background-color: #db7093;
+  font-size: 18px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .btn {
-  width: 100px;
-  height: 30px;
-  border: none;
-  background-color: #663399;
-  color: white;
-  font-size: 16px;
-  font-family: "Microsoft YaHei",sans-serif;
-  border-radius: 5px;
+  background-color: #ee82ee;
+  text-align: center;
+  font-size: 18px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: #ffffff;
 }
 
-.imgrds{
+.imgrds {
   border-radius: 25px;
-  box-shadow: 0 0 10px rgba(0,0,0,1.00);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+/*end*/
+
+/*RWD*/
+@media screen and (max-width: 650px) {
+  nav ul {
+    flex-direction: column;
+  }
+  div.wrap {
+    display: flex;
+    flex-direction: column;
+  }
+  .left {
+    width: 100%;
+  }
+  .main {
+    width: 100%;
+  }
+  .right {
+    width: 100%;
+  }
+}
+/*end*/
+.side-menu {
+  width: 200px;
+  height: 100%;
+  padding: 50px 0;
+  box-sizing: border-box;
+  background: linear-gradient(45deg, #3381b0, #c2196c);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 5px 0px 10px hsla(240, 50%, 20%, 0.6);
 }
 
-img{
-  display:block;
+nav#left a {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
 }
-/*class
--------------------------------------------------------------*/
-</style>
+/* 若設定一般border會把整塊貼滿，不好看 */
+nav#left a + a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 10px;
+  left: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+nav#left a .tou {
+  margin-right: -1.1em;
+  transform: scale(0);
+  transition: 0.3s;
+}
+nav#left a:hover .tou {
+  margin-right: 0em;
+  transform: scale(1);
+}

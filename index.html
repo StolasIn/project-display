@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <!--comment-->
 <html lang="zh-Hant-TW">
+
 <head>
-  <meta charset="utf-8" />
-  <title>main page</title>
-  <link href="style.css" type="text/css" rel="stylesheet">
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script type="text/javascript" src="index.js" charset="UTF-8"></script>
+	<meta charset="utf-8" />
+	<title>main page</title>
+	<link href="style.css" type="text/css" rel="stylesheet">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="index.js" charset="UTF-8"></script>
 </head>
-  <body>
+
+<body>
 	<header>
 		<div class="box1">
 			<h1><a href=".\index.html"><img src="pic\ina\home.jpg" height="65" width="65"></a></h1>
@@ -17,20 +19,20 @@
 			<h1 class="title">Personal Page</h1>
 		</div>
 		<div class="box3">
-			<img src="pic\ina\ina.gif" height="80" width="60"/>
+			<img src="pic\ina\ina.gif" height="80" width="60" />
 		</div>
 	</header>
 	<nav>
-        <ul>
-            <li><a href="../index.html">首頁</a></li>
-            <li><a href="../p2.html" target="_blank">系所宗旨</a></li>
-            <li><a href="../p3.html" target="_blank">說了好像沒說</a></li>
-            <li><a href="../p4.html" target="_blank">系所沿革</a></li>
-            <li><a href="#">關於作者</a></li>
-        </ul>
-    </nav>
+		<ul>
+			<li><a href="#">首頁</a></li>
+			<li><a href="./assembly.html" target="_blank">組合語言</a></li>
+			<li><a href="./web.html" target="_blank">網頁全端</a></li>
+			<li><a href="./database.html" target="_blank">資料庫</a></li>
+			<li><a href="#">關於作者</a></li>
+		</ul>
+	</nav>
 
-    <div class="wrap">
+	<div class="wrap">
 		<!--左邊-->
 		<section class="left">
 			<audio id="music" controls="controls" loop="loop">
@@ -38,8 +40,9 @@
 				<source src="Ina_s Festive.mp3" type="audio/ogg" />
 			</audio>
 			<h1 style="text-align: center; color: white; font-family: Brush Script MT; font-size: 60px;">who?</h1>
-			<img src="pic\ina\April Foolo.jpg" width="100%" height="auto" class="imgrds"/><br>
-			<div style="background-color: #663399; padding-bottom: 10px; border-bottom-right-radius: 15px; border-bottom-left-radius: 15px;">
+			<img src="pic\ina\April Foolo.jpg" width="100%" height="auto" class="imgrds" /><br>
+			<div
+				style="background-color: #663399; padding-bottom: 10px; border-bottom-right-radius: 15px; border-bottom-left-radius: 15px;">
 				<h1 style="text-transform: uppercase; color: white; background-color: black; padding:5px;">
 					about me
 					<img src="pic\ina\book.jpg" width="50" height="50" style="float: right;">
@@ -50,16 +53,16 @@
 				</p>
 			</div>
 		</section>
-      <!--中間-->
-      <section class="main">
-	        <a href="#bottom"><button type="button" style="margin: 15px; font-size: 18px; padding: 5px;">電鰻</button></a>
+		<!--中間-->
+		<section class="main">
+			<a href="#bottom"><button type="button" style="margin: 15px; font-size: 18px; padding: 5px;">電鰻</button></a>
 
-	        <!-- javascript-->
+			<!-- javascript-->
 
-	        <input type="text" id="see">
-	        <button onclick="print()" value="輸入東西">讓窩看看</button>
-	        <p id='love' style="font-size:18px; color: white; padding: 10px"></p>
-	       	
+			<input type="text" id="see">
+			<button onclick="print()" value="輸入東西">讓窩看看</button>
+			<p id='love' style="font-size:18px; color: white; padding: 10px"></p>
+
 			<div class="main_contain">
 				<div class="main_part1">
 					<table id="selector">
@@ -67,10 +70,10 @@
 							<tr>
 								<td><img src="pic\assembly\assembly.jpg" width="60%" height="60%" class="imgrds"></td>
 								<td style="width: 40%;">
-										<div style="font-size: 25px;">
-											<p>Assembly Language</p>
-										</div>
-										<p style="word-break: break-all;">我們都知道，只要有意義，那麼就必須慎重考慮。對於一般人來說，組合語言究竟象徵著什麼呢？</p>
+									<div style="font-size: 25px;">
+										<p style="font-style: oblique; font-weight: bold;">Assembly Language</p>
+									</div>
+									<p style="word-break: break-all;">我們都知道，只要有意義，那麼就必須慎重考慮。對於一般人來說，組合語言究竟象徵著什麼呢？</p>
 								<td style="vertical-align:bottom;">
 									<a href=".\assembly.html" target="_blank"><button class="rbtn">More</button></a>
 								</td>
@@ -82,15 +85,15 @@
 					<table id="selector">
 						<tbody>
 							<tr>
-								<td><img src="pic\assembly\assembly.jpg" width="60%" height="60%" class="imgrds"></td>
+								<td><img src="pic\web\web.jpg" width="60%" height="60%" class="imgrds"></td>
 								<td style="width: 40%;">
-										<div style="font-size: 25px;">
-											<p>Assembly Language</p>
-										</div>
-										<p style="word-break: break-all;">老舊的想法已經過時了。了解清楚組合語言到底是一種怎麼樣的存在，是解決一切問題的關鍵。</p>
+									<div style="font-size: 25px;">
+										<p style="font-style: oblique; font-weight: bold;">網頁全端設計實務</p>
+									</div>
+									<p style="word-break: break-all;">老舊的想法已經過時了。了解清楚web到底是一種怎麼樣的存在，是解決一切問題的關鍵。</p>
 								</td>
 								<td style="vertical-align:bottom;">
-									<a href=".\assembly.html" target="_blank"><button class="rbtn">More</button></a>
+									<a href=".\web.html" target="_blank"><button class="rbtn">More</button></a>
 								</td>
 							</tr>
 						</tbody>
@@ -100,49 +103,51 @@
 					<table id="selector">
 						<tbody>
 							<tr>
-								<td><img src="pic\assembly\assembly.jpg" width="60%" height="60%" class="imgrds"></td>
+								<td><img src="pic\database\db1.jpg" width="60%" height="60%" class="imgrds"></td>
 								<td style="width: 40%;">
-										<div style="font-size: 25px;">
-											<p>Assembly Language</p>
-										</div>
-										<p style="word-break: break-all;">回過神才發現，思考組合語言的存在意義，已讓我廢寢忘食。</p>
+									<div style="font-size: 25px;">
+										<p style="font-style: oblique; font-weight: bold;">資料庫系統概論</p>
+									</div>
+									<p style="word-break: break-all;">回過神才發現，思考資料庫的存在意義，已讓我廢寢忘食。</p>
 								</td>
 								<td style="vertical-align:bottom;">
-									<a href=".\assembly.html" target="_blank"><button class="rbtn">More</button></a>
+									<a href=".\database.html" target="_blank"><button class="rbtn">More</button></a>
 								</td>
 							</tr>
 						</tbody>
 					</table>
 				</div>
 			</div>
-	        <a href="#top"><button type="button" style="margin: 15px; font-size: 18px; padding: 5px">升天電梯</button></a>
-	        <p id="bottom"></p>
+			<a href="#top"><button type="button" style="margin: 15px; font-size: 18px; padding: 5px">升天電梯</button></a>
+			<p id="bottom"></p>
 		</section>
-    <!--右邊-->
-      <section class="right">
-			  <br>
-			  <button onclick="insert_tako()" 
-			  style="border-radius: 10px; font-size:15px; padding: 5px">
-			  getting longer
-				</button>
+		<!--右邊-->
+		<section class="right">
+			<br>
+			<button onclick="insert_tako()" style="border-radius: 10px; font-size:15px; padding: 5px">
+				getting longer
+			</button>
 
-				<button onclick="reset_tako()" 
-			  style="border-radius: 10px; font-size:15px; padding: 5px">
-			  reset
-				</button>
-				<br>
+			<button onclick="reset_tako()" style="border-radius: 10px; font-size:15px; padding: 5px">
+				reset
+			</button>
+			<br>
 
-        <img src="pic\ina\long tako1.jpg" width="100%" alt="long..." style="border-top-left-radius: 25px; border-top-right-radius: 25px; padding-top: 5px;" />
-        <img src="pic\ina\long tako2.jpg" width="100%" alt="long..."/>
-        <div id="long_tako_insert"></div>
-        <img src="pic\ina\long tako3.jpg" width="100%" alt="long..." style="border-bottom-left-radius: 25px; border-bottom-right-radius: 25px;" />
-	  </section>
+			<img src="pic\ina\long tako1.jpg" width="100%" alt="long..."
+				style="border-top-left-radius: 25px; border-top-right-radius: 25px; padding-top: 5px;" />
+			<img src="pic\ina\long tako2.jpg" width="100%" alt="long..." />
+			<div id="long_tako_insert"></div>
+			<img src="pic\ina\long tako3.jpg" width="100%" alt="long..."
+				style="border-bottom-left-radius: 25px; border-bottom-right-radius: 25px;" />
+		</section>
 
 	</div>
-      <div id="footer">
-      	<a href="https://github.com/StolasIn" target="_blank"><img src="pic\icon\github.jpg" width="30" height="30" style="margin:auto;" /></a>
-      	<h1 class="title">Bottom</h1>
-      </div>
-  </div>
+	<div id="footer">
+		<a href="https://github.com/StolasIn" target="_blank"><img src="pic\icon\github.jpg" width="30" height="30"
+				style="margin:auto;" /></a>
+		<h1 class="title">Bottom</h1>
+	</div>
+	</div>
 </body>
+
 </html>

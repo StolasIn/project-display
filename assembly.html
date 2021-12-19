@@ -1,165 +1,171 @@
 <!DOCTYPE html>
 <!--comment-->
 <html lang="zh-Hant-TW">
+
 <head>
   <meta charset="utf-8" />
   <title>assembly</title>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script type="text/javascript" src="index.js" charset="UTF-8"></script>
-</head>
-<body>
-  <div id="container">
-    <div id="header">
-      <h1 class="title"><a href=".\index.html"><img src="pic\ina\home.jpg" height="65" width="65" style="float:left"/></a>x86 assembly project
-        <img src="pic\ina\ina.GIF" height="70" width="50" style="float:right"/></h1>
-    </div>
-    
-    <div id="wrap">
-      <!--中間-->
-      <div id="main">
-        <div id="main_part">
-          <ul>
-          <li> 
-            <p style="font-size: 25px; font-style: oblique; font-weight: bold;">spring bird</p>
-            <img src="pic\assembly\bird.jpg" width="200" height="auto"/>
-            <p style="font-size: 20px;">
-              構思由以上flappy bird所產生，並在此基礎上做了某些改變，為了簡化設計上的工程，使用了irvine的library。
-            </p>
-          </li>
-          <li>
-            <p style="font-size: 25px;" id="obstacle">曾經遇到的困難</p>
-            <img src="pic\assembly\cry.jpg"/ width="200" height="auto"/>
-            <ol>
-              <li>
-                <p style="font-size: 22px;">隨機生成場景元素</p>
-                <img src="pic\assembly\code1.jpg"/ width="300" height="auto"/>
-                <p style="font-size: 20px;">
-                  為了生成隨機的場景，使用了4個變數去控制，分別是管寬、
-                  管間的寬度、管開口的寬度、管開口的位置，再利用隨機函數randomRange去生成水管。
-                </p>
-              </li>
-              <li>
-                <p style="font-size: 22px;">定位</p>
-                <img src="pic\assembly\code2.jpg"/ width="400" height="auto"/>
-                <p style="font-size: 20px;">
-                  實質的利用變數去儲存位置，讓使用者的輸入與時間去改變位置，
-                  並將結果印在遊戲視窗中，以此方式也較方便做碰撞判定。
-                </p>
-              </li>
-              <li>
-                <p style="font-size: 22px;">製造移動效果</p>
-                <img src="pic\assembly\code3.jpg" width="400" height="auto"/>
-                <p style="font-size: 20px;">
-                  用兩層迴圈把整個場景向左移動一格，來達到像鳥向前走的視覺效果。
-                </p>
-              </li>
-              <li>
-                <p style="font-size: 22px;">讀取使用者輸入</p>
-                <img src="pic\assembly\code4.jpg" width="400" height="auto"/>
-                <p style="font-size: 20px;">
-                  當單純使用readchar或readint時會出現
-                  需要等待輸入完成程式才會進入下一步動作的情形，
-                  這並不符合該遊戲的模式，因為當沒有輸入時鳥依然需要自然掉落，
-                  所以必須要使用readkey，來確保程式不需要等待使用者，且為了使遊戲操作更加順暢，
-                  使用了多重的readkey。
-                </p>
-              </li>
-            </ol>
-          </li>
-          <li>
-            <p style="font-size: 25px;" id="Experience">心得</p>
-            <img src="pic\assembly\hard.jpg" width="250" height="auto"/>
-            <p>
-              大概就像這樣，由於組合語言本身是一個較底層的語言，當要做出比較複雜的操作時，
-              所需要自己實作的東西就會比較多，也讓程式碼維護與更新變得更加艱辛，
-              所以必須把每個區塊分割好，再加上很多的註解，才能完成這個小遊戲
-              雖然這是一個蠻大的缺點，但是組合語言相對於其他較高階的語言來說，
-              執行速度十分快速，在做某些操作時可以直接用暴力法完成，而不會影響到使用者的體驗。
-              總而言之，本次小專題是人生中第一次製作遊戲，在過程中充滿了期待與新奇感，
-              於是整體開發時間也非常快速，也了解到要製作出一個能玩的遊戲需要顧慮許多部份，
-              算是一個很不錯的學習經歷，雖然希望未來別再碰到組語就是了zzz。
-              </p>
-          </li>
-          <li>
-            <p style="font-size: 25px;" id="Actual play">實際遊玩畫面</p>
-             <video controls style="width: 650px;">
-              <source src="pic/assembly/play.mp4" type="video/mp4">
-              <source src="pic/assembly/play.mp4" type="video/ogg">
-            </video> 
-          </li>
-          <li>
-            <p style="font-size: 25px;" id="Easter eggs">彩蛋</p>
-            <p>
-              當然為了增加遊戲樂趣，也有設計彩蛋，在輸入名字時可以觸發，不過檔案無法放上來，
-              大概也只有我知道了吧。
-            </p>
-          </li>
-          </ul>
-       </div>
-      </div>
-
-      <!--左邊-->
-      <div id="left" style="position: fixed;">
-        <a href="#footer"><button type="button" style="margin: 15px; font-size: 18px; padding: 5px">電鰻</button></a>
-        <table style="background-color: #EE82EE;">
-          <thead>
-            <tr>
-              <td style="text-align: center; font-size: 20px; background-color: #663399; color: white;">
-                links
-              </td>
-            <tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><a href="#obstacle"><button class="btn">Obstacle</button></a></td>
-            </tr>
-            <tr>
-              <td><a href="#Experience"><button class="btn">Experience</button></a></td>
-            </tr>
-            <tr>
-              <td><a href="#Actual play"><button class="btn">Actual play</button></a></td>
-            </tr>
-            <tr>
-              <td><a href="#Easter eggs"><button class="btn">Easter eggs</button></a></td>
-            </tr>
-          </tbody>
-        </table>
-        <a href="#header"><button type="button" style="margin: 15px; font-size: 18px; padding: 5px">升天電梯</button></a>
-      </div>
-    </div>
-
-    <!--右邊-->
-      <div id="right">
-        <audio id="music" controls="controls" loop="loop">
-          <source src="Ina's Festive.mp3" type="audio/mpeg" />
-          <source src="Ina's Festive.mp3" type="audio/ogg" />
-        </audio>
-
-        <br>
-        <button onclick="insert_tako()" 
-        style="border-radius: 10px; font-size:15px; padding: 5px">
-        getting longer
-        </button>
-
-        <button onclick="reset_tako()" 
-        style="border-radius: 10px; font-size:15px; padding: 5px">
-        reset
-        </button>
-        <br>
-
-        <img src="pic\ina\long tako1.jpg" width="400" alt="long..." style="border-top-left-radius: 25px; border-top-right-radius: 25px; padding-top: 5px;" />
-        <img src="pic\ina\long tako2.jpg" width="400" alt="long..."/>
-        <div id="long_tako_insert"></div>
-        <img src="pic\ina\long tako3.jpg" width="400" alt="long..." style="border-bottom-left-radius: 25px; border-bottom-right-radius: 25px;" />
-      </div>
-
-      <div id="footer">
-        <a href="https://github.com/StolasIn" target="_blank"><img src="pic\icon\github.jpg" width="30" height="30" style="margin:auto;" /></a>
-        <h1 class="title">Bottom</h1>
-      </div>
-  </div>
   <link href="base.css" type="text/css" rel="stylesheet">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="index.js"></script>
+  <script type="text/javascript" src="index.js" charset="UTF-8"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <header>
+    <div class="box1">
+      <h1><a href=".\index.html"><img src="pic\ina\home.jpg" height="65" width="65"></a></h1>
+    </div>
+    <div class="box2">
+      <h1 class="title" id="top">Personal Page</h1>
+    </div>
+    <div class="box3">
+      <img src="pic\ina\ina.gif" height="80" width="60" />
+    </div>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="./index.html" target="_blank">首頁</a></li>
+      <li><a href="#">組合語言</a></li>
+      <li><a href="./web.html" target="_blank">網頁全端</a></li>
+      <li><a href="./database.html" target="_blank">資料庫</a></li>
+      <li><a href="#">關於作者</a></li>
+    </ul>
+  </nav>
+
+  <div class="wrap">
+    <!--左邊-->
+    <section class="left">
+      <div class="side-menu">
+        <h1 style="text-align: center; font-size: 30px;">Links</h1>
+        <nav id="left" style="padding: 1rem;">
+          <a href="#obstacle"><i class="tou fab fa-affiliatetheme"></i>obstacle</a>
+          <a href="#Experience"><i class="tou fab fa-affiliatetheme"></i>Experience</a>
+          <a href="#Actual play"><i class="tou fas fa-affiliatetheme"></i>Actual play</a>
+          <a href="#Easter eggs"><i class="tou fas fa-affiliatetheme"></i>Easter eggs</a>
+          <a href="#top" style="position: fixed;"><i class="tou fab fa-affiliatetheme"></i>升天電梯</a>
+        </nav>
+      </div>
+    </section>
+    <!--中間-->
+    <div class="main">
+      <ul>
+        <li>
+          <p style="font-size: 36px; font-style: oblique; font-weight: bold;">spring bird</p><br>
+          <img src="pic\assembly\bird.jpg" width="200" height="auto" /><br>
+          <p style="font-size: 20px;">
+            構思由以上flappy bird所產生，並在此基礎上做了某些改變，為了簡化設計上的工程，使用了irvine的library。
+          </p>
+          <br><br>
+        </li>
+        <li>
+          <p style="font-size: 25px; font-style: oblique; font-weight: bold;" id="obstacle">曾經遇到的困難</p>
+          <img src="pic\assembly\cry.jpg" / width="200" height="auto" /><br>
+          <br><br>
+          <ol>
+            <li>
+              <p style="font-size: 25px; font-style: oblique; font-weight: bold;">隨機生成場景元素</p>
+              <img src="pic\assembly\code1.jpg" / width="300" height="auto" /><br>
+              <p style="font-size: 22px;">
+                為了生成隨機的場景，使用了4個變數去控制，分別是管寬、
+                管間的寬度、管開口的寬度、管開口的位置，再利用隨機函數randomRange去生成水管。
+              </p>
+              <br><br>
+            </li>
+            <li>
+              <p style="font-size: 25px; font-style: oblique; font-weight: bold;">定位</p>
+              <img src="pic\assembly\code2.jpg" / width="400" height="auto" /><br>
+              <p style="font-size: 22px;">
+                實質的利用變數去儲存位置，讓使用者的輸入與時間去改變位置，
+                並將結果印在遊戲視窗中，以此方式也較方便做碰撞判定。
+              </p>
+              <br><br>
+            </li>
+            <li>
+              <p style="font-size: 25px; font-style: oblique; font-weight: bold;">製造移動效果</p>
+              <img src="pic\assembly\code3.jpg" width="400" height="auto" /><br>
+              <p style="font-size: 22px;">
+                用兩層迴圈把整個場景向左移動一格，來達到像鳥向前走的視覺效果。
+              </p>
+              <br><br>
+            </li>
+            <li>
+              <p style="font-size: 25px; font-style: oblique; font-weight: bold;">讀取使用者輸入</p>
+              <img src="pic\assembly\code4.jpg" width="400" height="auto" /><br>
+              <p style="font-size: 22px;">
+                當單純使用readchar或readint時會出現
+                需要等待輸入完成程式才會進入下一步動作的情形，
+                這並不符合該遊戲的模式，因為當沒有輸入時鳥依然需要自然掉落，
+                所以必須要使用readkey，來確保程式不需要等待使用者，且為了使遊戲操作更加順暢，
+                使用了多重的readkey。
+              </p>
+              <br><br>
+            </li>
+          </ol>
+        </li>
+        <li>
+          <p style="font-size: 25px; font-style: oblique; font-weight: bold;" id="Experience">心得</p>
+          <img src="pic\assembly\hard.jpg" width="250" height="auto" /><br>
+          <p style="font-size: 22px;">
+            大概就像這樣，由於組合語言本身是一個較底層的語言，當要做出比較複雜的操作時，
+            所需要自己實作的東西就會比較多，也讓程式碼維護與更新變得更加艱辛，
+            所以必須把每個區塊分割好，再加上很多的註解，才能完成這個小遊戲
+            雖然這是一個蠻大的缺點，但是組合語言相對於其他較高階的語言來說，
+            執行速度十分快速，在做某些操作時可以直接用暴力法完成，而不會影響到使用者的體驗。
+            總而言之，本次小專題是人生中第一次製作遊戲，在過程中充滿了期待與新奇感，
+            於是整體開發時間也非常快速，也了解到要製作出一個能玩的遊戲需要顧慮許多部份，
+            算是一個很不錯的學習經歷，雖然希望未來別再碰到組語就是了zzz。
+          </p>
+          <br><br>
+        </li>
+        <li>
+          <p style="font-size: 25px; font-style: oblique; font-weight: bold;" id="Actual play">實際遊玩畫面</p>
+          <video controls style="width: 650px;">
+            <source src="pic/assembly/play.mp4" type="video/mp4">
+            <source src="pic/assembly/play.mp4" type="video/ogg">
+          </video>
+        </li>
+        <br><br>
+        <li>
+          <p style="font-size: 25px; font-style: oblique; font-weight: bold;" id="Easter eggs">彩蛋</p>
+          <p style="font-size: 22px;">
+            當然為了增加遊戲樂趣，也有設計彩蛋，在輸入名字時可以觸發，不過檔案無法放上來，
+            大概也只有我知道了吧。
+          </p>
+          <br><br>
+        </li>
+      </ul>
+    </div>
+    <!--右邊-->
+    <section class="right">
+      <audio id="music" controls="controls" loop="loop">
+        <source src="Ina_s Festive.mp3" type="audio/mpeg" />
+        <source src="Ina_s Festive.mp3" type="audio/ogg" />
+      </audio>
+      <br>
+      <button onclick="insert_tako()" style="border-radius: 10px; font-size:15px; padding: 5px">
+        getting longer
+      </button>
+
+      <button onclick="reset_tako()" style="border-radius: 10px; font-size:15px; padding: 5px">
+        reset
+      </button>
+      <br>
+
+      <img src="pic\ina\long tako1.jpg" width="100%" alt="long..."
+        style="border-top-left-radius: 25px; border-top-right-radius: 25px; padding-top: 5px;" />
+      <img src="pic\ina\long tako2.jpg" width="100%" alt="long..." />
+      <div id="long_tako_insert"></div>
+      <img src="pic\ina\long tako3.jpg" width="100%" alt="long..."
+        style="border-bottom-left-radius: 25px; border-bottom-right-radius: 25px;" />
+    </section>
+
+  </div>
+  <div id="footer">
+    <a href="https://github.com/StolasIn" target="_blank"><img src="pic\icon\github.jpg" width="30" height="30"
+        style="margin:auto;" /></a>
+    <h1 class="title">Bottom</h1>
+  </div>
 </body>
+
 </html>
