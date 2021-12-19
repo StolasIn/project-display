@@ -1,0 +1,169 @@
+/* Default
+------------------------------------------------- */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+body {
+  background-color: #9370DB;
+}
+
+/* Layout
+------------------------------------------------------------ */
+
+.wrap {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.box1{
+  width: 8%;
+}
+.box2{
+  width: 84%;
+}
+.box3{
+  width: 8%;
+}
+header {
+  width: 100%;
+  padding-top: 40px;
+  text-align: center;
+  background-image: url("tentacle.jpg");
+  background-repeat:no-repeat;
+  display: flex;
+  flex-direction: row;
+}
+
+section.left,
+section.main
+section.right {
+  padding: 1.5rem;
+}
+
+.left{
+  width: 25%;
+}
+.main{
+  width: 50%;
+}
+.right{
+  width: 20%;
+}
+.main_contain{
+  display: flex;
+  flex-direction: column;
+}
+#footer {
+  clear: both; /* Remove all wrap arounds */
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-image: url("tentacle.jpg");
+  background-attachment: fixed;
+  background-repeat:no-repeat;
+}
+
+#menu {
+  width: 170px;
+  height: 40px;
+  background-color: #8A2BE2;
+  border: none;
+}
+
+#home {
+  position: left;
+  padding-left: 10px;
+}
+nav {
+  background-color: #8c2a99;
+}
+nav ul {
+  display: flex;
+  padding-left: 1rem;
+  list-style-type: none;
+}
+nav ul li {
+  padding: 0.5rem 0.75rem;
+}
+nav ul li a {
+  padding: 0.5rem 0.75rem;
+  color: white;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+nav ul li a:hover {
+  background-color: deeppink;
+}
+/* Layout
+------------------------------------------------------------ */
+
+/*ob
+-------------------------------------------------------------*/
+
+#selector {
+  /*border-top-right-radius:30px;
+  border-bottom-right-radius: 30px;*/
+  border-radius: 25px;
+  background-color: #663399;
+  border: 2px #ccc solid;
+  color: white;
+  font-size: 20px;
+  margin: 5px;
+}
+
+/*ob
+-------------------------------------------------------------*/
+
+
+/*class
+-------------------------------------------------------------*/
+.title {
+  font-family: Avantgarde;
+  font-style: oblique;
+  color: white;
+}
+
+img{
+  display: block;
+}
+.rbtn {
+  border-top-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  background-color: #DB7093;
+  font-size: 18px; 
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.imgrds{
+  border-radius: 25px;
+  box-shadow: 0 0 10px rgba(0,0,0,1.00);
+}
+/*class
+-------------------------------------------------------------*/
+
+/*RWD*/
+@media screen and (max-width: 620px) {
+  nav ul {
+    flex-direction: column;
+  }
+  div.wrap {
+    display: flex;
+    flex-direction: column;
+  }
+  .left{
+    width: 100%;
+  }
+  .main{
+    width: 100%;
+  }
+  .right{
+    width: 100%;
+  }
+}

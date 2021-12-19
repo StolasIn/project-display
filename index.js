@@ -9,7 +9,7 @@ function print(){
 function insert_tako(){
 	var img = document.createElement("img");
 	img.src="pic/ina/long tako2.jpg";
-	img.setAttribute("width","400px");
+	img.setAttribute("width","100%");
 	var myDiv = document.getElementById('long_tako_insert');
 	myDiv.appendChild(img);
 }

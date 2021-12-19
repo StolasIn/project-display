@@ -1,0 +1,226 @@
+<html>
+  <style>
+  body {
+      background-image: url('https://pbs.twimg.com/media/Ehj_65iXsAA9ij6.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+  </style>
+  <head>
+    <meta charset="utf-8">
+    <title>StolasIn personal page</title>
+  </head>
+  <body>
+    <menu>menu :<br></menu>
+    <font style="color:white;">
+    <ol>
+      <li><a href="#excel">excel筆記</a></li>
+      <li><a href="#STL">STL</a></li>
+      <li><a href="#matrix">matrix</a></li>
+      <li><a href="#determinant">determinant</a></li>
+    </ol>
+    <h1 id="excel">應用統計excel筆記<br></h1>
+    <ol type="A">
+      <li><h3>一些常用操作 :</h3>
+        <ol>
+          <li>如果要從其他工作表、試算表引用內容要在引用的頁面按下enter</li>
+          <li>可以在檔案-選項-進階-自訂清單，來決定你需要的連續結果 ex.1月,2月...12月 或 早,中,晚 等等</li>
+          <li>可以用ctrl來多重選取資料</li>
+          <li>如果已知需要選取的儲存格範圍，可以使用 : 來省略選擇過程 ex. A2:D3 等等</li>
+          <li>對數字使用ctrl + 滑鼠拉伸會自動連加，否則只會複製同一個值</li>
+        </ol>
+      </li>
+      <br><br>
+      
+      <li><h3>快捷鍵區 :</h3>
+        <ol>
+           <li>可以使用F4來鎖定函數內的參數，讓之後對此函數的複製的該參數不會隨著平移</li>
+           <li>alt + enter : 在儲存格內換行</li>
+           <li>ctrl + home : 回到excel A1的儲存格</li>
+           <li>ctrl + shift + 方向鍵 : 到儲存資料的邊界</li>
+        </ol>
+      </li>
+      <br><br>
+      
+      <li><h3>常用區 :</h3>
+        <ol>
+          <li>跨欄至中 : 同資料在表格內統一顯示</li>
+          <li>設定格式化的條件 : 對於選擇的資料建立醒目的篩選</li>
+          <li>自動加總 == sum() : 加總選擇range中的所有數值</li>
+          <li>改變儲存格格式 : 可以改變數值的格式，用來以不同形態表示變數內容</li>
+          <li>填滿 : 可以選擇要填滿的格數跟數值，等差數列或等比數列的</li>
+          <li>複製格式 : 用來將一個儲存格格式複製給其他儲存格，如果要複製欄列寬度必須把整欄、列一起選取</li>
+         </ol>
+      </li>
+      <br><br>
+      
+      <li><h3>插入區 :</h3>
+        <ol>
+          <li>建議圖表 : 可以根據你在excel做的資料建立相對應的圖表，不能亂建立xy軸</li>
+        </ol>
+      </li>
+      <br><br>
+      
+      <li><h3>版面配置區 :</h3>
+        <ol>
+          
+        </ol>
+      </li>
+      <br><br>
+      
+      <li><h3>公式區 :</h3>
+        <ol>
+          <li>自動計算 : 將此工作表的所有函數重新計算，得到新結果</li>
+        </ol>
+      </li>
+      <br><br>
+      
+      <li><h3>資料區 :</h3>
+        <ol>
+          <li>資料驗證 : 可以設定選擇範圍內的資料只能使用設定的參數</li>
+          <li>篩選 : 可以只顯示出選擇的標籤結果</li>
+        </ol>
+      </li>
+      <br><br>
+      
+      <li><h3>校閱區 :</h3>
+        <ol>
+        </ol>
+      </li>
+      <br><br>
+      
+      <li><h3>檢視區 :</h3>
+        <ol>
+          <li>凍結窗格 : 對於選擇上方的欄或列進行凍結，在離開可是範圍的時候可以持續可見</li>
+        </ol>
+      </li>
+      <br><br>
+          
+      <li><h3>常用函數 :</h3>
+        <ol>
+          <li>countif()函數-第一個參數是range，第二個參數是篩選目標，結果是統計後符合條件的總數</li>
+        </ol>
+      </li>
+      
+    </ol>
+    <br><br><br><br>
+    <h1 id="STL">主要STL介紹 :</h1>
+    <ol>
+      <li><a href="#stack">stack</a></li>
+      <li><a href="#queue">queue</a></li>
+      <li><a href="#linked_list">linked_list</a></li>
+      <li><a href="#tree">tree</a></li>
+    </ol>
+    <br><br>
+    <ol>
+      <li id="stack"><h3>stack :</h3><br>
+        <img src="https://cdn.softwaretestinghelp.com/wp-content/qa/uploads/2019/06/pictorial-representation-of-stack.png">
+        <br><br><br><br>
+        <ul>
+          <li>stack是一種LIFO的資料結構，函數呼叫疊代的時候就是一種stack的表現</li>
+          <li>stack可以使用linked_list實作，需要一個變數紀錄最頂端的元素</li>
+        </ul>
+      </li>
+      <br><br><br>
+      <li id="queue"><h3>queue :</h3><br>
+        <img src="https://iq.opengenus.org/content/images/2019/05/pq.png">
+        <br><br><br><br>
+        <ul>
+          <li>queueg是一種FIFO的資料結構</li>
+          <li>stack可以使用linked_list實作，需要兩個變數分別紀錄最頭的元素與最尾巴的元素</li>
+        </ul>
+      </li>
+      <br><br><br>
+      <li id="linked_list"><h3>linked_list :</h3><br>
+        <img src="https://i.stack.imgur.com/y63By.gif">
+        <br><br><br><br>
+        <ul>
+          <li>linked_list的每個節點通常由兩個元素(data與指向下一個節點的指標)組成(double linked_list有三個)</li>
+          <li>linked_list的插入與刪除都是O(1) (不考慮尋找點的過程)</li>
+          <li>linked_list不像array一樣有random access memory，所以linked_list的traverse需要 O(n)</li>
+          <li>比起array適合用在頻繁做插入刪除且各數不多的資料</li>
+        </ul>
+      </li>
+      <br><br><br>
+      <li id="tree"><h3>tree :</h3><br>
+        <img src="https://cdn.softwaretestinghelp.com/wp-content/qa/uploads/2019/08/pictorial-representation-of-a-binary-tree.png">
+        <br><br><br><br>
+        <ul>
+          <li>樹會有一個根節點</li>
+          <li>樹的父節點與子節點會有parent child的關係</li>
+          <li>level被稱為樹高，是從根結點到最遠葉節點的距離</li>
+        </ul>
+      </li>
+      <br><br><br>
+    </ol>
+    <br><br><br>
+    <h1 id="matrix">matrix (矩陣):</h1>
+      <ol>
+        <li><h3>矩陣名詞 :</h3>
+          <ul>
+            <li>sequare matrix (方陣) : 行數=列數的矩陣 n*n階的方陣</li>
+            <li>unit matrix (單位矩陣) : 對角線元素為1其餘為0的方陣</li>
+            <li>zero matrix (0矩陣) : 所有元素皆為0的矩陣</li>
+            <li>matrix transpose (轉置矩陣) : 矩陣行列互換 記為 A^T</li>
+            <li>matrix inverse (反矩陣) : 記為A^-1  滿足A*(A^-1)=(A^-1)*A=I</li>
+            <li>diagonal matrix (對角線矩陣) : 除主對角線元素外其他元素皆為0的矩陣</li>
+            <li>triangular matrix (上/下三角矩陣) : 所有主對角線下/上的元素皆為0</li>
+            <li>symmtric matrix (對稱矩陣) : 主對角線以外的元素可經由主對角線兩兩對稱</li>
+            <li>singular/nunsingular matrix (奇異/非奇異矩陣) : 該矩陣沒有/有矩陣反元素存在</li>
+            <li>elementary matrix (列操作矩陣) : 一個單位矩陣經過一次的列運算</li>
+          </ul>
+        </li>
+        <br><br><br>
+        <li><h3>matrix properties :</h3>
+          <ul>
+            <li>矩陣不一定滿足指數律以及乘法的交換律</li>
+            <li>A*B=A*C 但 B不一定等於C</li>
+            <li>(A*B)^T = (B^T)*(A^T) 且 (A*B)^-1 = (B^-1)*(A^-1)</li>
+            <li>ut:上三角矩陣 lt:下三角矩陣  : (ut/lt)^T 還是ut/lt , ut*ut 或 lt*lt 都依然是ut/lt</li>
+            <li>假設A是symmtric matrix : A^T=A</li>
+            <li>對角線矩陣 (diagonal matrix) 的矩陣反元素是所有元素取倒數(自乘n次則是把所有元素取n次方)</li>
+            <li>(k*A)^-1 = (A^-1)/k k是一個常數</li>
+            <li>(A^n)^T = (A^T)^n</li>
+            <li>所有elementary matrix都是可逆的且他的反矩陣也是elementary matrix</li>
+            <li>如果一個矩陣可以經由row operation變成I，表示他是可逆的 p.s可經由同樣順序的運算將一個I變成該矩陣的反矩陣</li>
+          </ul>
+        </li>
+      </ol>
+      <br><br><br>
+    <h1 id="determinant">determinant (行列式) :</h1>
+    <ol>
+      <li><h3>行列式性質 :</h3>
+        <ul>
+          <li>det(A) = det(A^T)</li>
+          <li>det(A*B) = det(A)*det(B)</li>
+          <li>det(A^-1) = 1/(det(A))</li>
+          <li>det(A+B) != det(A)+det(B)</li>
+          <li>det(kA) = (k)^n*det(A) k為一個常數，n表示A的階數</li>
+          <li>上/下三角矩陣的行列式值為該矩陣的對角線元素合</li>
+          <li>對一個矩陣的行或列乘k倍，其行列式值變為k倍</li>
+          <li>將矩陣的兩行/列互換，其行列式值變為原本的-1倍</li>
+          <li>將原本矩陣的一行乘上k倍加到另外一行，其行列式值不變</li>
+          <li>矩陣任兩列/行程比例，其行列式值為0</li>
+          <li>矩陣某行/列為0，其行列式值為0</li>
+          <li>A^-1 = adj(A)/det(A)</li>
+          <li>adj(A)表示一個陣列，其元素為以該元素為目標的其他<a href="#餘子式展開">餘子式展開和</a></li>
+        </ul>
+      </li>
+      <li><h3>其他重要操作 :</h3>
+        <ul>
+          <li id="餘子式展開">cofactor expansion (餘子式展開) :<br>
+              <img src="https://semath.info/img/la/cofactor_expansion_ex3_01.jpg">
+              <br><br><br>
+              將矩陣以任一行/列展開，可便利算出行列式值，四階同下圖操作<br>
+              tips : 以0較多的那一行/列展開可計算較少行列式<br><br><br>
+              <img src="https://semath.info/img/inverse_cofactor_ex4_02.jpg">
+              <br><br><br>
+          </li>
+        </ul>
+      </li>
+    </ol>
+    </font>
+    <!--<a href="https://fjuonlinejudge.github.io/Training/">reference-->
+   </body>
+</html>
