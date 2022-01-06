@@ -34,20 +34,14 @@ function sett(){
         }
     }
     rawFile.send(null);
-	/*code.innerHTML=s;
-	document.getElementById('hi').appendChild(code);*/
 }
-$(function() {
-    $('nav#menu').mmenu();
-  });
-/*var nav = document.querySelector("nav");
+
+
+var nav = document.querySelector("nav");
 var navAnchor = document.querySelectorAll("nav ul li a");
 window.addEventListener("scroll", () => {
-	if(window.pageYOffset != 0){
-		nav.style.backgroundColor = "rgba(220,220,220,0.9)";
-		navAnchor.forEach(a => {
-			a.style.color = "black";
-		});
+	if(window.pageYOffset > 100){
+		nav.style.backgroundColor = "#663399";
 	}
 	else{
 		nav.style.backgroundColor = "";
@@ -55,4 +49,4 @@ window.addEventListener("scroll", () => {
 			a.style.color = "";
 		});
 	}
-});*/
+});

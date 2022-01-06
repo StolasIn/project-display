@@ -8,6 +8,7 @@
 }
 body {
   background-color: #9370db;
+  position: relative;
 }
 /*header
 -------------------------------------------------------------*/
@@ -37,13 +38,18 @@ header {
 /*nav
 -------------------------------------------------------------*/
 nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
   background-color: #8c2a99;
 }
 
 nav ul {
+  width: 35%;
   display: flex;
   padding-left: 1rem;
   list-style-type: none;
+  justify-content: space-around;
 }
 nav ul li {
   padding: 0.5rem 0.75rem;
@@ -63,6 +69,7 @@ nav ul li a:hover {
 -------------------------------------------------------------*/
 .wrap {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   width: 100%;
 }
@@ -72,6 +79,7 @@ section.main section.right {
   padding: 1.5rem;
 }
 /*end*/
+
 /*left part
 -------------------------------------------------------------*/
 .left {
@@ -132,6 +140,10 @@ section.main section.right {
   color: white;
 }
 
+.active {
+  color: gold;
+}
+
 img {
   display: block;
 }
@@ -157,6 +169,10 @@ img {
 @media screen and (max-width: 650px) {
   nav ul {
     flex-direction: column;
+  }
+  nav ul li {
+    padding: 0.5rem 0rem;
+    border-bottom: 2px solid gray;
   }
   div.wrap {
     display: flex;

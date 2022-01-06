@@ -1,0 +1,183 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+body {
+  background-color: #9370db;
+  position: relative;
+}
+
+header {
+  width: 100%;
+  padding-top: 40px;
+  text-align: center;
+  background-image: url("tentacle.jpg");
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #8c2a99;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #8c2a99;
+}
+
+nav ul {
+  width: 35%;
+  display: flex;
+  padding-left: 1rem;
+  list-style-type: none;
+  justify-content: space-around;
+}
+nav ul li {
+  padding: 0.5rem 0.75rem;
+}
+nav ul li a {
+  padding: 0.5rem 0.75rem;
+  color: white;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+nav ul li a:hover {
+  background-color: deeppink;
+}
+.box1 {
+  width: 8%;
+}
+
+.box2 {
+  width: 84%;
+}
+
+.box3 {
+  width: 8%;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0.5rem;
+}
+
+main section.table {
+  -webkit-box-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+  padding: 2rem;
+}
+
+main section.table table {
+  border-collapse: collapse;
+}
+
+main section.table table tr {
+  border-bottom: 1px solid #ed84f6;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+main section.table table tr td {
+  padding: 1rem;
+}
+
+main section.table table tr:hover {
+  background-color: #aa6cce;
+}
+
+main section.picture {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+}
+
+main section.picture img.img1 {
+  position: relative;
+  width: 25vw;
+  border: 2px solid #ed84f6;
+  border-radius: 10%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  z-index: 1;
+}
+
+main section.picture img.img1:hover {
+  box-shadow: 0 0 50px rgba(0, 0, 0, 1);
+  transform: rotate(5deg);
+}
+
+main section.picture div.blueRect {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  border: 2px solid #ed84f6;
+  border-radius: 10%;
+  width: 27vw;
+  height: 75vh;
+  background-color: darkorchid;
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  z-index: 0;
+}
+
+#footer {
+  clear: both; /* Remove all wrap arounds */
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-image: url("tentacle.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+.active {
+  color: gold;
+}
+
+@media screen and (max-width: 1100px) {
+  header nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  header nav ul li {
+    padding: 0.5rem 0rem;
+    border-bottom: 2px solid gray;
+  }
+  main section.picture {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  main section.picture img {
+    width: 50vw;
+  }
+  main section.picture div.blueRect {
+    display: none;
+  }
+}
+
+footer a {
+  padding: 1rem;
+}
+/*# sourceMappingURL=resume.css.map */

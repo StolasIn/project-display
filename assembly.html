@@ -7,7 +7,6 @@
   <title>assembly</title>
   <link href="base.css" type="text/css" rel="stylesheet">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script type="text/javascript" src="index.js" charset="UTF-8"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -17,22 +16,21 @@
       <h1><a href=".\index.html"><img src="pic\ina\home.jpg" height="65" width="65"></a></h1>
     </div>
     <div class="box2">
-      <h1 class="title" id="top">Personal Page</h1>
+      <h1 style="text-align: center; color: white; font-family: Comic Sans MS; font-size: 40px;">assembly project
+      </h1>
     </div>
     <div class="box3">
       <img src="pic\ina\ina.gif" height="80" width="60" />
     </div>
   </header>
-  <nav>
+  <nav id="top">
     <ul>
-      <li><a href="./index.html" target="_blank">首頁</a></li>
-      <li><a href="#">組合語言</a></li>
-      <li><a href="./web.html" target="_blank">網頁全端</a></li>
-      <li><a href="./database.html" target="_blank">資料庫</a></li>
-      <li><a href="#">關於作者</a></li>
+      <li><a href="#" class="active">首頁</a></li>
+      <li><a href="./resume.html" target="_blank">個人履歷</a></li>
+      <li><a href="./contact.html" target="_blank">聯絡方式</a></li>
+      <li><a href="./project/index.html" target="_blank">網頁成果</a></li>
     </ul>
   </nav>
-
   <div class="wrap">
     <!--左邊-->
     <section class="left">
@@ -43,7 +41,7 @@
           <a href="#Experience"><i class="tou fab fa-affiliatetheme"></i>Experience</a>
           <a href="#Actual play"><i class="tou fas fa-affiliatetheme"></i>Actual play</a>
           <a href="#Easter eggs"><i class="tou fas fa-affiliatetheme"></i>Easter eggs</a>
-          <a href="#top" style="position: fixed;"><i class="tou fab fa-affiliatetheme"></i>升天電梯</a>
+          <a><i class="tou fab fa-affiliatetheme"></i> </a>
         </nav>
       </div>
     </section>
@@ -167,5 +165,6 @@
     <h1 class="title">Bottom</h1>
   </div>
 </body>
+<script type="text/javascript" src="index.js" charset="UTF-8"></script>
 
 </html>

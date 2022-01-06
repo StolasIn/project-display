@@ -38,9 +38,13 @@ header {
 /*nav
 -------------------------------------------------------------*/
 nav {
+  position: sticky;
+  top: 0;
   background-color: #8c2a99;
 }
-
+nav#top {
+  position: relative;
+}
 nav ul {
   display: flex;
   padding-left: 1rem;
@@ -197,7 +201,9 @@ img {
   flex-direction: column;
   box-shadow: 5px 0px 10px hsla(240, 50%, 20%, 0.6);
 }
-
+nav#left {
+  border-bottom: 2px solid gray;
+}
 nav#left a {
   display: block;
   padding: 10px;
