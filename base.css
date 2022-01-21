@@ -176,6 +176,15 @@ img {
   nav ul {
     flex-direction: column;
   }
+  div.side-menu {
+    display: none;
+  }
+  audio {
+    display: none;
+  }
+  nav#top {
+    position: sticky;
+  }
   div.wrap {
     display: flex;
     flex-direction: column;
